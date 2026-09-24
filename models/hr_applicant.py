@@ -57,7 +57,10 @@ def _ai_worker_loop(dbname):
     skipped = set()  # applicants another process is analysing right now
     try:
         while True:
-            with Registry(dbname).cursor() as cr:
+            # Pick up what other processes changed (settings, translations, module updates):
+            # outside a web request or a scheduled job nobody else refreshes the caches.
+            registry = Registry(dbname).check_signaling()
+            with registry.cursor() as cr:
                 env = api.Environment(cr, SUPERUSER_ID, {})
                 applicant = env["hr.applicant"].search(
                     [("ai_state", "=", "pending"), ("id", "not in", list(skipped))],
