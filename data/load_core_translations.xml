@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Runs on install and on every update: imports data/i18n_core/*.po
+         (Georgian translation of the core Recruitment screens). -->
+    <function model="hr.recruitment.ai.engine" name="_load_core_translations"/>
+</odoo>

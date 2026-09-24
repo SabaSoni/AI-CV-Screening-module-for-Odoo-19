@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="res_config_settings_view_form_ai" model="ir.ui.view">
+        <field name="name">res.config.settings.view.form.inherit.hr.recruitment.ai</field>
+        <field name="model">res.config.settings</field>
+        <field name="inherit_id" ref="hr_recruitment.res_config_settings_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//block[@name='recruitment_process_div']" position="after">
+                <block title="AI CV Screening (local, free)" name="hr_recruitment_ai_block">
+                    <setting id="hr_recruitment_ai_engine_setting" string="Local AI engine (Ollama)"
+                             help="Runs on this machine. No API key, no credits, CVs never leave the server.">
+                        <div class="content-group">
+                            <div class="row mt8">
+                                <label for="hr_recruitment_ai_ollama_url" class="col-lg-4 o_light_label"/>
+                                <field name="hr_recruitment_ai_ollama_url"/>
+                            </div>
+                            <div class="row">
+                                <label for="hr_recruitment_ai_chat_model" class="col-lg-4 o_light_label"/>
+                                <field name="hr_recruitment_ai_chat_model"/>
+                            </div>
+                            <div class="row">
+                                <label for="hr_recruitment_ai_embed_model" class="col-lg-4 o_light_label"/>
+                                <field name="hr_recruitment_ai_embed_model"/>
+                            </div>
+                            <div class="mt8">
+                                <button name="action_hr_recruitment_ai_test_connection" type="object"
+                                        string="Test connection" class="btn-link" icon="fa-plug"/>
+                            </div>
+                        </div>
+                    </setting>
+                    <setting id="hr_recruitment_ai_use_llm_setting" help="Judges each requirement, writes the summary and drafts the e-mail. Without it only keywords and embeddings are used.">
+                        <field name="hr_recruitment_ai_use_llm"/>
+                    </setting>
+                    <setting id="hr_recruitment_ai_use_embeddings_setting" help="Finds requirements phrased differently than the keywords (multilingual).">
+                        <field name="hr_recruitment_ai_use_embeddings"/>
+                    </setting>
+                    <setting id="hr_recruitment_ai_auto_run_setting" help="Every CV that lands on an applicant (e-mail alias, upload) is screened by the scheduler within two minutes.">
+                        <field name="hr_recruitment_ai_auto_run"/>
+                    </setting>
+                    <setting id="hr_recruitment_ai_matching_setting" string="Matching &amp; language"
+                             help="Defaults for jobs; each job can set its own threshold.">
+                        <div class="content-group">
+                            <div class="row mt8">
+                                <label for="hr_recruitment_ai_default_threshold" class="col-lg-6 o_light_label"/>
+                                <field name="hr_recruitment_ai_default_threshold" class="col-lg-2"/>
+                            </div>
+                            <div class="row">
+                                <label for="hr_recruitment_ai_language" class="col-lg-6 o_light_label"/>
+                                <field name="hr_recruitment_ai_language" class="col-lg-4"/>
+                            </div>
+                            <div class="row">
+                                <label for="hr_recruitment_ai_overwrite_contacts" class="col-lg-6 o_light_label"/>
+                                <field name="hr_recruitment_ai_overwrite_contacts"/>
+                            </div>
+                            <div class="row">
+                                <label for="hr_recruitment_ai_llm_email" class="col-lg-6 o_light_label"/>
+                                <field name="hr_recruitment_ai_llm_email"/>
+                            </div>
+                            <div class="row">
+                                <label for="hr_recruitment_ai_proofread" class="col-lg-6 o_light_label"/>
+                                <field name="hr_recruitment_ai_proofread"/>
+                            </div>
+                        </div>
+                    </setting>
+                    <setting id="hr_recruitment_ai_advanced_setting" string="Advanced"
+                             help="Only change these if CVs are cut short or the GPU runs out of memory.">
+                        <div class="content-group">
+                            <div class="row mt8">
+                                <label for="hr_recruitment_ai_num_ctx" class="col-lg-6 o_light_label"/>
+                                <field name="hr_recruitment_ai_num_ctx" class="col-lg-3"/>
+                            </div>
+                            <div class="row">
+                                <label for="hr_recruitment_ai_max_chars" class="col-lg-6 o_light_label"/>
+                                <field name="hr_recruitment_ai_max_chars" class="col-lg-3"/>
+                            </div>
+                            <div class="row">
+                                <label for="hr_recruitment_ai_disable_thinking" class="col-lg-6 o_light_label"/>
+                                <field name="hr_recruitment_ai_disable_thinking"/>
+                            </div>
+                            <div class="row">
+                                <label for="hr_recruitment_ai_embed_on_cpu" class="col-lg-6 o_light_label"/>
+                                <field name="hr_recruitment_ai_embed_on_cpu"/>
+                            </div>
+                        </div>
+                    </setting>
+                </block>
+            </xpath>
+        </field>
+    </record>
+</odoo>

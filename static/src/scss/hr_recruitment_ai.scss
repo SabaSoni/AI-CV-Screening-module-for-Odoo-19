@@ -1,0 +1,1027 @@
+/* AI CV Screening - visual language of the module.
+   Plain CSS on purpose (no SCSS features): the same file feeds the design preview. */
+
+/* Tokens live on :root because pills are also used outside the report (kanban cards). */
+:root {
+    --hrai-green: #1f9d63;
+    --hrai-green-bg: #e9f7f0;
+    --hrai-amber: #d98a1f;
+    --hrai-amber-bg: #fdf4e3;
+    --hrai-red: #d64545;
+    --hrai-red-bg: #fdecec;
+    --hrai-grey: #7b8496;
+    --hrai-grey-bg: #f1f3f7;
+    --hrai-ink: #1f2937;
+    --hrai-muted: #6b7280;
+    --hrai-line: #e6e9f0;
+    --hrai-accent: #5b4bdb;
+}
+
+.o_hrai_report {
+    color: var(--hrai-ink);
+    font-size: 14px;
+    line-height: 1.6;
+    max-width: 1180px;
+}
+
+.o_hrai_report p {
+    margin: 0 0 .6em;
+}
+
+.o_hrai_report p:last-child {
+    margin-bottom: 0;
+}
+
+/* ------------------------------------------------------------ hero */
+.o_hrai_hero {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+    padding: 24px 28px;
+    margin-bottom: 18px;
+    border-radius: 18px;
+    border: 1px solid var(--hrai-line);
+    background: linear-gradient(135deg, #f5f6ff 0%, #f3f7fb 100%);
+}
+
+.o_hrai_hero--match {
+    background: linear-gradient(135deg, #eefaf4 0%, #f3f8ff 100%);
+    border-color: #cfeadc;
+}
+
+.o_hrai_hero--partial {
+    background: linear-gradient(135deg, #fff8ea 0%, #f7f8fc 100%);
+    border-color: #f3e0b8;
+}
+
+.o_hrai_hero--nomatch {
+    background: linear-gradient(135deg, #fdf0f0 0%, #f7f8fc 100%);
+    border-color: #f2cfcf;
+}
+
+.o_hrai_ring {
+    flex: 0 0 auto;
+    width: 136px;
+    height: 136px;
+    border-radius: 50%;
+    background: #e3e7ee; /* fallback; the score arc comes from an inline conic-gradient */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 6px 18px rgba(31, 41, 55, .08);
+}
+
+.o_hrai_ring_inner {
+    width: 106px;
+    height: 106px;
+    border-radius: 50%;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    line-height: 1.1;
+}
+
+.o_hrai_ring_value {
+    font-size: 34px;
+    font-weight: 700;
+    letter-spacing: -.5px;
+}
+
+.o_hrai_ring_value small {
+    font-size: 16px;
+    font-weight: 600;
+    margin-left: 1px;
+}
+
+.o_hrai_ring_label {
+    margin-top: 4px;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: .6px;
+    color: var(--hrai-muted);
+}
+
+.o_hrai_hero_main {
+    flex: 1 1 auto;
+    min-width: 0;
+}
+
+.o_hrai_hero_title {
+    margin-top: 10px;
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 1.25;
+}
+
+.o_hrai_hero_sub {
+    color: var(--hrai-muted);
+    margin-top: 2px;
+}
+
+.o_hrai_stats {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 16px;
+}
+
+.o_hrai_stat {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 8px 14px;
+    background: rgba(255, 255, 255, .85);
+    border: 1px solid var(--hrai-line);
+    border-radius: 12px;
+}
+
+.o_hrai_stat > i {
+    font-size: 16px;
+    color: var(--hrai-accent);
+    width: 18px;
+    text-align: center;
+}
+
+.o_hrai_stat_label {
+    display: block;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: .4px;
+    color: var(--hrai-muted);
+    line-height: 1.2;
+}
+
+.o_hrai_stat_value {
+    display: block;
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+/* ------------------------------------------------------------ pills & chips */
+.o_hrai_pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 5px 14px;
+    border-radius: 999px;
+    font-weight: 700;
+    font-size: 13px;
+    white-space: nowrap;
+    background: var(--hrai-grey-bg);
+    color: var(--hrai-grey);
+}
+
+.o_hrai_pill--match, .o_hrai_pill--met {
+    background: var(--hrai-green-bg);
+    color: var(--hrai-green);
+}
+
+.o_hrai_pill--partial {
+    background: var(--hrai-amber-bg);
+    color: var(--hrai-amber);
+}
+
+.o_hrai_pill--nomatch, .o_hrai_pill--not_met {
+    background: var(--hrai-red-bg);
+    color: var(--hrai-red);
+}
+
+.o_hrai_pill--sm {
+    padding: 2px 10px;
+    font-size: 12px;
+}
+
+.o_hrai_chip {
+    display: inline-block;
+    padding: 1px 9px;
+    margin: 0 4px 4px 0;
+    border-radius: 999px;
+    font-size: 12px;
+    background: var(--hrai-grey-bg);
+    color: #4b5563;
+    white-space: nowrap;
+}
+
+.o_hrai_chip--must {
+    background: #fff;
+    color: var(--hrai-red);
+    border: 1px solid #f0b9b9;
+}
+
+.o_hrai_chip--kw {
+    background: #eef0ff;
+    color: #4338ca;
+    font-family: SFMono-Regular, Consolas, "Liberation Mono", monospace;
+}
+
+/* ------------------------------------------------------------ banners */
+.o_hrai_notice {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 12px 16px;
+    margin-bottom: 18px;
+    border-radius: 12px;
+    background: var(--hrai-red-bg);
+    color: #a12f2f;
+    font-weight: 600;
+}
+
+.o_hrai_notice > i {
+    margin-top: 3px;
+}
+
+.o_hrai_empty {
+    text-align: center;
+    padding: 48px 24px;
+    margin-bottom: 18px;
+    border: 1px dashed #cfd5e2;
+    border-radius: 18px;
+    background: #fafbfe;
+}
+
+.o_hrai_empty_icon {
+    width: 72px;
+    height: 72px;
+    margin: 0 auto 16px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    color: var(--hrai-accent);
+    background: #ecebff;
+}
+
+.o_hrai_empty--pending .o_hrai_empty_icon {
+    color: var(--hrai-amber);
+    background: var(--hrai-amber-bg);
+}
+
+.o_hrai_empty--error .o_hrai_empty_icon {
+    color: var(--hrai-red);
+    background: var(--hrai-red-bg);
+}
+
+.o_hrai_empty_title {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 6px;
+}
+
+.o_hrai_empty_text {
+    color: var(--hrai-muted);
+    max-width: 560px;
+    margin: 0 auto;
+}
+
+/* ------------------------------------------------------------ cards */
+.o_hrai_card {
+    background: #fff;
+    border: 1px solid var(--hrai-line);
+    border-radius: 16px;
+    padding: 20px 24px;
+    margin-bottom: 18px;
+    box-shadow: 0 1px 2px rgba(31, 41, 55, .04);
+}
+
+.o_hrai_card_title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 15px;
+    font-weight: 700;
+    margin-bottom: 14px;
+}
+
+.o_hrai_card_title > i {
+    width: 30px;
+    height: 30px;
+    border-radius: 9px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    color: var(--hrai-accent);
+    background: #ecebff;
+    flex: 0 0 auto;
+}
+
+.o_hrai_card_meta {
+    margin-left: auto;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--hrai-muted);
+}
+
+.o_hrai_card--summary {
+    border-left: 4px solid var(--hrai-accent);
+}
+
+.o_hrai_card--summary p {
+    font-size: 15px;
+    line-height: 1.75;
+}
+
+.o_hrai_card--good .o_hrai_card_title > i {
+    color: var(--hrai-green);
+    background: var(--hrai-green-bg);
+}
+
+.o_hrai_card--bad .o_hrai_card_title > i {
+    color: var(--hrai-red);
+    background: var(--hrai-red-bg);
+}
+
+.o_hrai_grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+    margin-bottom: 18px;
+}
+
+.o_hrai_grid > .o_hrai_card {
+    margin-bottom: 0;
+}
+
+.o_hrai_list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.o_hrai_list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 9px 0;
+    border-top: 1px solid #f0f2f6;
+}
+
+.o_hrai_list li:first-child {
+    border-top: 0;
+    padding-top: 0;
+}
+
+.o_hrai_list li > i {
+    flex: 0 0 auto;
+    width: 22px;
+    height: 22px;
+    margin-top: 1px;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 11px;
+    color: #fff;
+    background: var(--hrai-green);
+}
+
+.o_hrai_card--bad .o_hrai_list li > i {
+    background: var(--hrai-red);
+}
+
+.o_hrai_muted {
+    color: var(--hrai-muted);
+}
+
+/* ------------------------------------------------------------ requirement checklist */
+.o_hrai_segments {
+    display: flex;
+    gap: 4px;
+    height: 8px;
+    margin-bottom: 8px;
+}
+
+.o_hrai_seg {
+    border-radius: 999px;
+    background: #e3e7ee;
+    min-width: 10px;
+}
+
+.o_hrai_seg--met {
+    background: var(--hrai-green);
+}
+
+.o_hrai_seg--partial {
+    background: var(--hrai-amber);
+}
+
+.o_hrai_seg--not_met {
+    background: #efb4b4;
+}
+
+.o_hrai_req {
+    display: grid;
+    grid-template-columns: 36px minmax(0, 1fr) auto;
+    gap: 14px;
+    align-items: start;
+    padding: 14px 0;
+    border-top: 1px solid #f0f2f6;
+}
+
+.o_hrai_req_icon {
+    width: 36px;
+    height: 36px;
+    border-radius: 11px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
+    color: var(--hrai-grey);
+    background: var(--hrai-grey-bg);
+}
+
+.o_hrai_req--met .o_hrai_req_icon {
+    color: var(--hrai-green);
+    background: var(--hrai-green-bg);
+}
+
+.o_hrai_req--partial .o_hrai_req_icon {
+    color: var(--hrai-amber);
+    background: var(--hrai-amber-bg);
+}
+
+.o_hrai_req--not_met .o_hrai_req_icon {
+    color: var(--hrai-red);
+    background: var(--hrai-red-bg);
+}
+
+.o_hrai_req_name {
+    font-weight: 700;
+    margin-right: 8px;
+}
+
+.o_hrai_req_status {
+    text-align: right;
+}
+
+.o_hrai_req_points {
+    margin-top: 4px;
+    font-size: 12px;
+    color: var(--hrai-muted);
+    white-space: nowrap;
+}
+
+.o_hrai_formula {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    margin: 4px 0 6px;
+    padding: 8px 12px;
+    border-radius: 10px;
+    background: #f6f7fb;
+    color: #4b5563;
+    font-size: 13px;
+}
+
+.o_hrai_formula > i {
+    margin-top: 3px;
+    color: var(--hrai-accent);
+}
+
+.o_hrai_req_evidence {
+    margin-top: 6px;
+    color: #4b5563;
+    font-size: 13px;
+}
+
+.o_hrai_req_evidence > div {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    margin-top: 4px;
+}
+
+.o_hrai_req_evidence > div > i {
+    flex: 0 0 16px;
+    margin-top: 4px;
+    text-align: center;
+    color: #9aa3b2;
+}
+
+/* ------------------------------------------------------------ job setup */
+.o_hrai_steps {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 14px;
+    margin-bottom: 18px;
+}
+
+.o_hrai_step {
+    display: flex;
+    gap: 14px;
+    padding: 16px 18px;
+    border-radius: 16px;
+    border: 1px solid var(--hrai-line);
+    background: linear-gradient(135deg, #f7f7ff 0%, #ffffff 70%);
+}
+
+.o_hrai_step_num {
+    flex: 0 0 auto;
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    color: #fff;
+    background: var(--hrai-accent);
+}
+
+.o_hrai_step_title {
+    font-weight: 700;
+    margin-bottom: 2px;
+}
+
+.o_hrai_step_text {
+    color: var(--hrai-muted);
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+.o_hrai_hint {
+    color: var(--hrai-muted);
+    font-size: 13px;
+    margin: -6px 0 14px;
+}
+
+.o_hrai_report .o_hrai_card > .o_group,
+.o_hrai_report .o_hrai_card .o_inner_group {
+    margin-bottom: 0;
+}
+
+.o_hrai_details > summary {
+    cursor: pointer;
+    color: var(--hrai-muted);
+    padding: 6px 2px;
+}
+
+.o_hrai_details pre, .o_hrai_details .o_field_text {
+    font-size: 12.5px;
+}
+
+/* The report is a read-only HTML field: remove the editor's own padding. */
+.o_field_widget.o_hrai_report_field {
+    display: block;
+    width: 100%;
+    padding: 0;
+}
+
+/* ------------------------------------------------------------ banner on the applicant form */
+.o_hrai_banner_wrap {
+    clear: both;
+    display: flex;
+    align-items: stretch;
+    gap: 14px;
+    margin: 6px 0 18px;
+}
+
+.o_field_widget.o_hrai_banner_field {
+    display: block;
+    flex: 1 1 auto;
+    min-width: 0;
+    padding: 0;
+    margin: 0;
+}
+
+.o_hrai_banner {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    height: 100%;
+    padding: 14px 20px;
+    border-radius: 16px;
+    border: 1px solid var(--hrai-line);
+    background: linear-gradient(135deg, #f5f6ff 0%, #f7f8fc 100%);
+    color: var(--hrai-ink);
+}
+
+.o_hrai_banner--match {
+    background: linear-gradient(135deg, #eefaf4 0%, #f3f8ff 100%);
+    border-color: #cfeadc;
+}
+
+.o_hrai_banner--partial {
+    background: linear-gradient(135deg, #fff8ea 0%, #f7f8fc 100%);
+    border-color: #f3e0b8;
+}
+
+.o_hrai_banner--nomatch, .o_hrai_banner--error {
+    background: linear-gradient(135deg, #fdf0f0 0%, #f7f8fc 100%);
+    border-color: #f2cfcf;
+}
+
+.o_hrai_banner--pending {
+    background: linear-gradient(135deg, #fff8ea 0%, #f7f8fc 100%);
+    border-color: #f3e0b8;
+}
+
+.o_hrai_ring--sm {
+    width: 72px;
+    height: 72px;
+    box-shadow: none;
+}
+
+.o_hrai_ring--sm .o_hrai_ring_inner {
+    width: 56px;
+    height: 56px;
+}
+
+.o_hrai_ring--sm .o_hrai_ring_value {
+    font-size: 19px;
+}
+
+.o_hrai_ring--sm .o_hrai_ring_value small {
+    font-size: 11px;
+}
+
+.o_hrai_banner_icon {
+    flex: 0 0 auto;
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 21px;
+    color: var(--hrai-accent);
+    background: #ecebff;
+}
+
+.o_hrai_banner--pending .o_hrai_banner_icon {
+    color: var(--hrai-amber);
+    background: var(--hrai-amber-bg);
+}
+
+.o_hrai_banner--error .o_hrai_banner_icon {
+    color: var(--hrai-red);
+    background: var(--hrai-red-bg);
+}
+
+.o_hrai_banner_main {
+    flex: 1 1 auto;
+    min-width: 0;
+}
+
+.o_hrai_banner_top {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 6px 12px;
+}
+
+.o_hrai_banner_meta {
+    font-size: 13px;
+    color: var(--hrai-muted);
+}
+
+.o_hrai_banner_title {
+    font-weight: 700;
+    font-size: 15px;
+}
+
+.o_hrai_banner_text {
+    margin-top: 5px;
+    color: #374151;
+    line-height: 1.55;
+}
+
+.o_hrai_banner_actions {
+    flex: 0 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 8px;
+}
+
+.o_hrai_banner_actions .btn {
+    white-space: nowrap;
+}
+
+@media (max-width: 991.98px) {
+    .o_hrai_banner_wrap {
+        flex-direction: column;
+    }
+    .o_hrai_banner_actions {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+}
+
+/* ------------------------------------------------------------ AI analysis page */
+.o_hrai_center {
+    padding: 24px 28px;
+    margin-bottom: 18px;
+    border-radius: 18px;
+    border: 1px solid var(--hrai-line);
+    background: linear-gradient(135deg, #f5f6ff 0%, #f3f8ff 100%);
+}
+
+.o_hrai_center_head {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 18px;
+}
+
+.o_hrai_center .o_hrai_hero_title {
+    margin-top: 0;
+}
+
+.o_hrai_center .o_hrai_tile {
+    background: rgba(255, 255, 255, .9);
+    border: 1px solid var(--hrai-line);
+}
+
+/* Doubled class: must win over the generic 4-column .o_hrai_tiles rule defined further down. */
+.o_hrai_tiles.o_hrai_tiles--6 {
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+}
+
+.o_hrai_tile--amber .o_hrai_tile_num {
+    color: var(--hrai-amber);
+}
+
+.o_hrai_tile--red .o_hrai_tile_num {
+    color: var(--hrai-red);
+}
+
+.o_hrai_progress {
+    height: 10px;
+    margin: 18px 0 8px;
+    border-radius: 999px;
+    background: #e3e7ee;
+    overflow: hidden;
+}
+
+.o_hrai_progress_bar {
+    height: 100%;
+    border-radius: 999px;
+    background: linear-gradient(90deg, #1f9d63, #35c98a);
+    transition: width .3s ease;
+}
+
+.o_hrai_actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.o_hrai_row {
+    display: grid;
+    grid-template-columns: minmax(0, 2fr) minmax(0, 2fr) 70px minmax(0, 1.4fr) 120px;
+    gap: 12px;
+    align-items: center;
+    padding: 10px 0;
+    border-top: 1px solid #f0f2f6;
+}
+
+.o_hrai_row:first-of-type {
+    border-top: 0;
+}
+
+.o_hrai_row_name {
+    font-weight: 700;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.o_hrai_row_job, .o_hrai_row_verdict, .o_hrai_row_time {
+    color: var(--hrai-muted);
+    font-size: 13px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.o_hrai_row_time {
+    text-align: right;
+}
+
+/* Hand upload on the applicant form */
+.o_hrai_upload {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    padding-top: 6px;
+    border-top: 1px dashed #d8dce6;
+    font-size: 13px;
+}
+
+.o_hrai_upload_label {
+    color: var(--hrai-muted);
+}
+
+@media (max-width: 991.98px) {
+    .o_hrai_tiles.o_hrai_tiles--6 {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+    .o_hrai_row {
+        grid-template-columns: minmax(0, 1fr) 70px;
+    }
+    .o_hrai_row_job, .o_hrai_row_verdict, .o_hrai_row_time {
+        display: none;
+    }
+}
+
+/* ------------------------------------------------------------ job positions dashboard */
+.o_hrai_pill--ai {
+    background: #ecebff;
+    color: #4338ca;
+}
+
+.o_hrai_dot {
+    display: inline-block;
+    width: 4px;
+    height: 4px;
+    margin: 0 2px;
+    border-radius: 50%;
+    background: currentColor;
+    opacity: .5;
+    vertical-align: middle;
+}
+
+/* Cards instead of the core full-width rows (desktop only; the core mobile card is kept). */
+@media (min-width: 768px) {
+    .o_hrai_jobs .o_content .o_kanban_renderer.o_kanban_ungrouped {
+        padding: 16px 12px !important;
+        gap: 16px;
+        align-content: flex-start;
+        background: #f6f7fb;
+    }
+
+    .o_hrai_jobs .o_content .o_kanban_renderer.o_kanban_ungrouped .o_kanban_record {
+        width: auto !important;
+        flex: 1 1 520px;   /* two cards per row on a laptop, three on a wide monitor */
+        max-width: 780px;
+        margin: 0 !important;
+        --KanbanRecord-padding-v: 0px !important;
+        --KanbanRecord-padding-h: 0px !important;
+    }
+
+    .o_hrai_jobs .o_content .o_kanban_renderer.o_kanban_ungrouped .o_kanban_record:not(.o_kanban_ghost) {
+        border: 1px solid #e6e9f0;
+        border-radius: 18px;
+        overflow: hidden;
+        background: #fff;
+        box-shadow: 0 1px 3px rgba(31, 41, 55, .05);
+        transition: box-shadow .15s ease, transform .15s ease;
+    }
+
+    .o_hrai_jobs .o_content .o_kanban_renderer.o_kanban_ungrouped .o_kanban_record:not(.o_kanban_ghost):hover {
+        box-shadow: 0 10px 26px rgba(31, 41, 55, .10);
+        transform: translateY(-2px);
+    }
+}
+
+.o_hrai_job {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 20px 22px 16px;
+    width: 100%;
+    color: #1f2937;
+}
+
+.o_hrai_job_title {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1.3;
+    padding-right: 28px; /* room for the card's dropdown toggle */
+}
+
+.o_hrai_job_meta {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 6px 16px;
+    margin-top: 6px;
+    font-size: 13px;
+    color: #6b7280;
+}
+
+.o_hrai_job_alias {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.o_hrai_tiles {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 10px;
+}
+
+.o_hrai_tile {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2px;
+    padding: 12px 12px;
+    border-radius: 14px;
+    background: #f4f5f9;
+    color: #1f2937;
+    text-decoration: none !important;
+    min-width: 0;
+}
+
+.o_hrai_tile_num {
+    font-size: 26px;
+    font-weight: 700;
+    line-height: 1.1;
+}
+
+.o_hrai_tile_label {
+    max-width: 100%;
+    font-size: 12px;
+    line-height: 1.3;
+    color: #6b7280;
+    /* Georgian words are long: never break inside a word, shorten with an ellipsis instead. */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-break: normal;
+    overflow-wrap: normal;
+}
+
+.o_hrai_tile--blue {
+    background: #eaf2ff;
+}
+
+.o_hrai_tile--blue .o_hrai_tile_num {
+    color: #2563eb;
+}
+
+.o_hrai_tile--green {
+    background: #e9f7f0;
+    cursor: pointer;
+}
+
+.o_hrai_tile--green .o_hrai_tile_num {
+    color: #1f9d63;
+}
+
+a.o_hrai_tile--green:hover {
+    background: #d9f1e6;
+}
+
+.o_hrai_job_ai {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px 14px;
+    min-height: 26px;
+}
+
+.o_hrai_job_note {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 13px;
+    color: #6b7280;
+}
+
+.o_hrai_job_actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding-top: 12px;
+    border-top: 1px solid #f0f2f6;
+}
+
+.o_hrai_job_clock {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+/* ------------------------------------------------------------ small screens */
+@media (max-width: 767.98px) {
+    .o_hrai_hero {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
+    }
+    .o_hrai_stats {
+        justify-content: center;
+    }
+    .o_hrai_grid, .o_hrai_steps {
+        grid-template-columns: minmax(0, 1fr);
+    }
+    .o_hrai_req {
+        grid-template-columns: 36px minmax(0, 1fr);
+    }
+    .o_hrai_req_status {
+        grid-column: 2;
+    }
+}

@@ -1,0 +1,2346 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* hr_recruitment_ai
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 19.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-09-24 07:35+0000\n"
+"PO-Revision-Date: 2026-09-24 07:35+0000\n"
+"Last-Translator: \n"
+"Language-Team: Georgian\n"
+"Language: ka\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n!=1);\n"
+
+#. module: hr_recruitment_ai
+#. odoo-python
+#: code:addons/hr_recruitment_ai/models/hr_recruitment_ai_center.py:0
+msgid ""
+"%(done)s of %(total)s CVs analysed - %(pending)s in the queue, about "
+"%(minutes)s min left. Press Refresh to update."
+msgstr ""
+"%(total)s CV-იდან %(done)s გაანალიზებული - რიგში %(pending)s, დარჩენილი დრო "
+"დაახლოებით %(minutes)s წუთი. განახლებისათვის - ღილაკი „განახლება“."
+
+#. module: hr_recruitment_ai
+#. odoo-python
+#: code:addons/hr_recruitment_ai/models/hr_recruitment_ai_center.py:0
+msgid "%(done)s of %(total)s CVs analysed."
+msgstr "%(total)s CV-იდან %(done)s გაანალიზებული."
+
+#. module: hr_recruitment_ai
+#. odoo-python
+#: code:addons/hr_recruitment_ai/models/hr_applicant_report.py:0
+msgid "%(gained)s / %(total)s points"
+msgstr "%(gained)s / %(total)s ქულა"
+
+#. module: hr_recruitment_ai
+#. odoo-python
+#: code:addons/hr_recruitment_ai/models/ai_engine.py:0
+msgid "%(label)s: dropped %(n)s item(s) containing garbled words."
+msgstr "%(label)s: %(n)s პუნქტი დამახინჯებული სიტყვებით წაშლილია."
+
+#. module: hr_recruitment_ai
+#. odoo-python
+#: code:addons/hr_recruitment_ai/models/ai_engine.py:0
+msgid "%(label)s: merged %(n)s repeated item(s)."
+msgstr "%(label)s: %(n)s გამეორებული პუნქტი გაერთიანებულია."
+
+#. module: hr_recruitment_ai
+#. odoo-python
+#: code:addons/hr_recruitment_ai/models/ai_engine.py:0
+msgid "%(label)s: removed %(n)s garbled word(s) from another alphabet."
+msgstr ""
+"%(label)s: %(n)s დამახინჯებული სიტყვა (სხვა ალფაბეტის სიმბოლოებით) წაშლილია."
+
+#. module: hr_recruitment_ai
+#. odoo-python
+#: code:addons/hr_recruitment_ai/models/ai_engine.py:0
+msgid "%(label)s: translation skipped: %(err)s"
+msgstr "%(label)s: თარგმნა გამოტოვებულია: %(err)s"
+
+#. module: hr_recruitment_ai
+#. odoo-python
+#: code:addons/hr_recruitment_ai/models/ai_engine.py:0
+msgid "%(label)s: written in the wrong language, translated in %(secs).1f s."
+msgstr "%(label)s: ტექსტი სხვა ენაზე იყო; თარგმნა დასრულდა %(secs).1f წამში."
+
+#. module: hr_recruitment_ai
+#. odoo-python
+#: code:addons/hr_recruitment_ai/models/hr_applicant_report.py:0
+msgid "%(met)s of %(total)s requirements met"
+msgstr "%(total)s მოთხოვნიდან %(met)s დაკმაყოფილებული"
+
+#. module: hr_recruitment_ai
+#. odoo-python
+#: code:addons/hr_recruitment_ai/models/hr_recruitment_ai_center.py:0
+msgid ""
+"%(n)s CV(s) queued, about %(minutes)s min. It runs in the background; press "
+"Refresh to follow it."
+msgstr ""
+"%(n)s CV რიგში დაყენებულია, დაახლოებით %(minutes)s წუთი. ანალიზი ფონურ "
+"რეჟიმში ხდება; პროგრესისათვის - ღილაკი „განახლება“."
+
+#. module: hr_recruitment_ai
+#. odoo-python
+#: code:addons/hr_recruitment_ai/models/hr_job.py:0
+msgid ""
+"%(n)s applicant(s) queued. The scheduler processes them within a couple of "
+"minutes; open an applicant and click 'Analyze CV' to run one now."
+msgstr ""
+"%(n)s კანდიდატი რიგში დაყენებულია. სისტემა მათ დაახლოებით 2 წუთში "
+"ავტომატურად გადაამუშავებს. დაუყოვნებლივ ანალიზისათვის: კანდიდატის ფორმა, "
+"ღილაკი „CV-ის ანალიზი (AI)“."
+
+#. module: hr_recruitment_ai
+#. odoo-python
+#: code:addons/hr_recruitment_ai/models/hr_applicant.py:0
+msgid "%(name)s: %(score)s%% match (%(verdict)s)."
+msgstr "%(name)s: %(score)s%% შესაბამისობა (%(verdict)s)."
+
+#. module: hr_recruitment_ai
+#. odoo-python
+#: code:addons/hr_recruitment_ai/models/hr_applicant.py:0
+msgid "%(score)s%% (threshold %(threshold)s%%)"
+msgstr "%(score)s%% (ზღვარი %(threshold)s%%)"
+
+#. module: hr_recruitment_ai
+#. odoo-python
+#: code:addons/hr_recruitment_ai/models/hr_applicant.py:0
+msgid "%s CV(s) queued. The analysis runs in the background."
+msgstr "%s CV რიგში დაყენებულია. ანალიზი ფონურ რეჟიმში ხდება."
+
+#. module: hr_recruitment_ai
+#. odoo-python
+#: code:addons/hr_recruitment_ai/models/hr_recruitment_ai_center.py:0
+msgid ""
+"%s applicant(s) created and queued. The analysis runs in the background; "
+"press Refresh to follow it."
+msgstr ""
+"შექმნილია %s კანდიდატი და რიგში დაყენებულია. ანალიზი ფონურ რეჟიმში ხდება; "
+"პროგრესისათვის - ღილაკი „განახლება“."
+
+#. module: hr_recruitment_ai
+#. odoo-python
+#: code:addons/hr_recruitment_ai/models/hr_applicant.py:0
+msgid "%s characters"
+msgstr "%s სიმბოლო"
+
+#. module: hr_recruitment_ai
+#: model:ir.model.fields,help:hr_recruitment_ai.field_hr_applicant_requirement_result__score
+msgid "0 = not found, 0.5 = partial evidence, 1 = clearly met."
+msgstr ""
+"0 = არ მოიძებნა, 0.5 = ნაწილობრივ დადასტურებული, 1 = სრულად დადასტურებული."
+
+#. module: hr_recruitment_ai
+#: model_terms:ir.ui.view,arch_db:hr_recruitment_ai.view_hr_job_kanban_ai
+msgid ""
+"<i class=\"fa fa-clock-o\" role=\"img\" aria-label=\"Activities\"/>\n"
+"                            <span>Activities</span>"
+msgstr ""
+"<i class=\"fa fa-clock-o\" role=\"img\" aria-label=\"Activities\"/>\n"
+"                            <span>დავალებები</span>"
+
+#. module: hr_recruitment_ai
+#: model_terms:ir.ui.view,arch_db:hr_recruitment_ai.hr_recruitment_ai_center_view_form
+msgid ""
+"<i class=\"fa fa-cloud-upload\" role=\"img\" aria-label=\"Upload\"/>\n"
+"                                    <span>Upload CVs by hand</span>"
+msgstr ""
+"<i class=\"fa fa-cloud-upload\" role=\"img\" aria-label=\"Upload\"/>\n"
+"                                    <span>CV-ების ხელით ჩატვირთვა</span>"
+
+#. module: hr_recruitment_ai
+#: model_terms:ir.ui.view,arch_db:hr_recruitment_ai.view_hr_job_form_ai
+msgid ""
+"<i class=\"fa fa-commenting-o\" role=\"img\" aria-label=\"Notes\"/>\n"
+"                                    <span>Free-text requirements for the AI</span>"
+msgstr ""
+"<i class=\"fa fa-commenting-o\" role=\"img\" aria-label=\"Notes\"/>\n"
+"                                    <span>მოთხოვნები AI-ისათვის თავისუფალი ტექსტით</span>"
+
+#. module: hr_recruitment_ai
+#: model_terms:ir.ui.view,arch_db:hr_recruitment_ai.view_hr_job_kanban_ai
+msgid "<i class=\"fa fa-envelope-o\" role=\"img\" aria-label=\"E-mail\"/>"
+msgstr ""
+
+#. module: hr_recruitment_ai
+#: model_terms:ir.ui.view,arch_db:hr_recruitment_ai.hr_applicant_view_form_ai
+msgid ""
+"<i class=\"fa fa-envelope-o\" role=\"img\" aria-label=\"E-mail\"/>\n"
+"                                <span>Invitation e-mail</span>"
+msgstr ""
+"<i class=\"fa fa-envelope-o\" role=\"img\" aria-label=\"E-mail\"/>\n"
+"                                <span>მოსაწვევი წერილი</span>"
+
+#. module: hr_recruitment_ai
+#: model_terms:ir.ui.view,arch_db:hr_recruitment_ai.hr_applicant_view_form_ai
+msgid ""
+"<i class=\"fa fa-file-text-o\" role=\"img\" aria-label=\"CV\"/>\n"
+"                                    <span>Extracted CV text</span>"
+msgstr ""
+"<i class=\"fa fa-file-text-o\" role=\"img\" aria-label=\"CV\"/>\n"
+"                                    <span>CV-იდან ამოღებული ტექსტი</span>"
+
+#. module: hr_recruitment_ai
+#: model_terms:ir.ui.view,arch_db:hr_recruitment_ai.hr_recruitment_ai_center_view_form
+msgid ""
+"<i class=\"fa fa-folder-open-o\" role=\"img\" aria-label=\"Lists\"/>\n"
+"                                <span>Open the lists</span>"
+msgstr ""
+"<i class=\"fa fa-folder-open-o\" role=\"img\" aria-label=\"Lists\"/>\n"
+"                                <span>სიების გახსნა</span>"
+
+#. module: hr_recruitment_ai
+#: model_terms:ir.ui.view,arch_db:hr_recruitment_ai.view_hr_job_kanban_ai
+msgid ""
+"<i class=\"fa fa-hourglass-half\" role=\"img\" aria-label=\"Queued\"/>\n"
+"                                <span>in the queue:</span>"
+msgstr ""
+"<i class=\"fa fa-hourglass-half\" role=\"img\" aria-label=\"Queued\"/>\n"
+"                                <span>რიგში:</span>"
+
+#. module: hr_recruitment_ai
+#: model_terms:ir.ui.view,arch_db:hr_recruitment_ai.view_hr_job_form_ai
+msgid ""
+"<i class=\"fa fa-list-ul\" role=\"img\" aria-label=\"Requirements\"/>\n"
+"                                <span>Skills and requirements (each one is scored)</span>"
+msgstr ""
+"<i class=\"fa fa-list-ul\" role=\"img\" aria-label=\"Requirements\"/>\n"
+"                                <span>უნარები და მოთხოვნები (თითოეული ქულით ფასდება)</span>"
+
+#. module: hr_recruitment_ai
+#: model_terms:ir.ui.view,arch_db:hr_recruitment_ai.hr_job_simple_form_ai
+msgid ""
+"<i class=\"fa fa-list-ul\" role=\"img\" aria-label=\"Requirements\"/>\n"
+"                            <span>Skills and requirements (each one is scored)</span>"
+msgstr ""
+"<i class=\"fa fa-list-ul\" role=\"img\" aria-label=\"Requirements\"/>\n"
+"                            <span>უნარები და მოთხოვნები (თითოეული ქულით ფასდება)</span>"
+
+#. module: hr_recruitment_ai
+#: model_terms:ir.ui.view,arch_db:hr_recruitment_ai.hr_kanban_view_applicant_ai
+msgid "<i class=\"fa fa-magic\" role=\"img\" aria-label=\"AI\"/>"
+msgstr ""
+
+#. module: hr_recruitment_ai
+#: model_terms:ir.ui.view,arch_db:hr_recruitment_ai.hr_recruitment_ai_center_view_form
+msgid ""
+"<i class=\"fa fa-magic\" role=\"img\" aria-label=\"AI\"/>\n"
+"                                    <span>Analyse the CVs</span>"
+msgstr ""
+"<i class=\"fa fa-magic\" role=\"img\" aria-label=\"AI\"/>\n"
+"                                    <span>CV-ების ანალიზი</span>"
+
+#. module: hr_recruitment_ai
+#: model_terms:ir.ui.view,arch_db:hr_recruitment_ai.view_hr_job_kanban_ai
+msgid ""
+"<i class=\"fa fa-magic\" role=\"img\" aria-label=\"AI\"/>\n"
+"                                <span>AI criteria:</span>"
+msgstr ""
+"<i class=\"fa fa-magic\" role=\"img\" aria-label=\"AI\"/>\n"
+"                                <span>AI კრიტერიუმები:</span>"
+
+#. module: hr_recruitment_ai
+#: model_terms:ir.ui.view,arch_db:hr_recruitment_ai.hr_job_simple_form_ai
+msgid ""
+"<i class=\"fa fa-magic\" role=\"img\" aria-label=\"AI\"/>\n"
+"                            <span>What the AI should look for</span>"
+msgstr ""
+"<i class=\"fa fa-magic\" role=\"img\" aria-label=\"AI\"/>\n"
+"                            <span>AI-ის შეფასების კრიტერიუმები</span>"
+
+#. module: hr_recruitment_ai
+#: model_terms:ir.ui.view,arch_db:hr_recruitment_ai.view_hr_job_kanban_ai
+msgid ""
+"<i class=\"fa fa-sliders\" role=\"img\" aria-label=\"Configure\"/> "
+"<span>Configure</span>"
+msgstr ""
+"<i class=\"fa fa-sliders\" role=\"img\" aria-label=\"Configure\"/> "
+"<span>კონფიგურაცია</span>"
+
+#. module: hr_recruitment_ai
+#: model_terms:ir.ui.view,arch_db:hr_recruitment_ai.view_hr_job_form_ai
+msgid ""
+"<i class=\"fa fa-sliders\" role=\"img\" aria-label=\"Rules\"/>\n"
+"                                    <span>Matching rules</span>"
+msgstr ""
+"<i class=\"fa fa-sliders\" role=\"img\" aria-label=\"Rules\"/>\n"
+"                                    <span>შესაბამისობის წესები</span>"
+
+#. module: hr_recruitment_ai
+#: model_terms:ir.ui.view,arch_db:hr_recruitment_ai.hr_applicant_view_form_ai
+msgid ""
+"<i class=\"fa fa-terminal\" role=\"img\" aria-label=\"Log\"/>\n"
+"                                    <span>Engine log</span>"
+msgstr ""
+"<i class=\"fa fa-terminal\" role=\"img\" aria-label=\"Log\"/>\n"
+"                                    <span>ანალიზის ჟურნალი</span>"
+
+#. module: hr_recruitment_ai
+#: model_terms:ir.ui.view,arch_db:hr_recruitment_ai.view_hr_job_kanban_ai
+msgid "<span class=\"o_hrai_dot\"/> <span>average</span>"
+msgstr "<span class=\"o_hrai_dot\"/> <span>საშუალო</span>"
+
+#. module: hr_recruitment_ai
+#: model_terms:ir.ui.view,arch_db:hr_recruitment_ai.view_hr_job_kanban_ai
+msgid "<span class=\"o_hrai_dot\"/> <span>threshold</span>"
+msgstr "<span class=\"o_hrai_dot\"/> <span>ზღვარი</span>"
+
+#. module: hr_recruitment_ai
+#: model_terms:ir.ui.view,arch_db:hr_recruitment_ai.view_hr_job_kanban_ai
+msgid ""
+"<span class=\"o_hrai_pill o_hrai_pill--sm o_hrai_pill--partial\">\n"
+"                                <i class=\"fa fa-exclamation-circle\" role=\"img\" aria-label=\"Warning\"/>\n"
+"                                <span>AI criteria are not set yet</span>\n"
+"                            </span>"
+msgstr ""
+"<span class=\"o_hrai_pill o_hrai_pill--sm o_hrai_pill--partial\">\n"
+"                                <i class=\"fa fa-exclamation-circle\" role=\"img\" aria-label=\"Warning\"/>\n"
+"                                <span>AI კრიტერიუმები მითითებული არ არის</span>\n"
+"                            </span>"
+
+#. module: hr_recruitment_ai
+#: model_terms:ir.ui.view,arch_db:hr_recruitment_ai.view_hr_job_form_ai
+msgid "<span class=\"o_hrai_step_num\">1</span>"
+msgstr "<span class=\"o_hrai_step_num\">1</span>"
+
+#. module: hr_recruitment_ai
+#: model_terms:ir.ui.view,arch_db:hr_recruitment_ai.view_hr_job_form_ai
+msgid "<span class=\"o_hrai_step_num\">2</span>"
+msgstr "<span class=\"o_hrai_step_num\">2</span>"
+
+#. module: hr_recruitment_ai
+#: model_terms:ir.ui.view,arch_db:hr_recruitment_ai.view_hr_job_form_ai
+msgid "<span class=\"o_hrai_step_num\">3</span>"
+msgstr "<span class=\"o_hrai_step_num\">3</span>"
+
+#. module: hr_recruitment_ai
+#: model_terms:ir.ui.view,arch_db:hr_recruitment_ai.view_hr_job_kanban_ai
+msgid ""
+"<span class=\"o_hrai_tile_label\"><i class=\"fa fa-magic\" role=\"img\" "
+"aria-label=\"AI\"/> <span>Shortlisted</span></span>"
+msgstr ""
+"<span class=\"o_hrai_tile_label\"><i class=\"fa fa-magic\" role=\"img\" "
+"aria-label=\"AI\"/> <span>შერჩეული</span></span>"
+
+#. module: hr_recruitment_ai
+#: model_terms:ir.ui.view,arch_db:hr_recruitment_ai.view_hr_job_kanban_ai
+msgid "<span class=\"o_hrai_tile_label\">In progress</span>"
+msgstr "<span class=\"o_hrai_tile_label\">პროცესში</span>"
+
+#. module: hr_recruitment_ai
+#: model_terms:ir.ui.view,arch_db:hr_recruitment_ai.view_hr_job_kanban_ai
+msgid "<span class=\"o_hrai_tile_label\">New</span>"
+msgstr "<span class=\"o_hrai_tile_label\">ახალი</span>"
+
+#. module: hr_recruitment_ai
+#: model_terms:ir.ui.view,arch_db:hr_recruitment_ai.view_hr_job_kanban_ai
+msgid "<span class=\"o_hrai_tile_label\">Vacant</span>"
+msgstr "<span class=\"o_hrai_tile_label\">ვაკანტური</span>"
+
+#. module: hr_recruitment_ai
+#: model_terms:ir.ui.view,arch_db:hr_recruitment_ai.hr_applicant_view_form_ai
+msgid ""
+"<span class=\"o_hrai_upload_label\"><i class=\"fa fa-cloud-upload\" "
+"role=\"img\" aria-label=\"Upload\"/> <span>Upload a CV</span></span>"
+msgstr ""
+"<span class=\"o_hrai_upload_label\"><i class=\"fa fa-cloud-upload\" "
+"role=\"img\" aria-label=\"Upload\"/> <span>CV-ის ჩატვირთვა</span></span>"
+
+#. module: hr_recruitment_ai
+#: model_terms:ir.ui.view,arch_db:hr_recruitment_ai.hr_job_simple_form_ai
+#: model_terms:ir.ui.view,arch_db:hr_recruitment_ai.view_hr_job_form_ai
+msgid "<span>%</span>"
+msgstr "<span>%</span>"
+
+#. module: hr_recruitment_ai
+#: model_terms:ir.ui.view,arch_db:hr_recruitment_ai.view_hr_job_kanban_ai
+msgid "<span>CVs analysed:</span>"
+msgstr "<span>გაანალიზებული CV:</span>"
+
+#. module: hr_recruitment_ai
+#: model_terms:ir.ui.view,arch_db:hr_recruitment_ai.hr_job_simple_form_ai
+#: model_terms:ir.ui.view,arch_db:hr_recruitment_ai.view_hr_job_form_ai
+msgid "<span>years</span>"
+msgstr "<span>წელი</span>"
+
+#. module: hr_recruitment_ai
+#. odoo-python
+#: code:addons/hr_recruitment_ai/models/hr_applicant_report.py:0
+msgid ""
+"A must-have requirement is missing, so this candidate can only be a partial "
+"match."
+msgstr ""
+"აკლია აუცილებელი მოთხოვნა, ამიტომ კანდიდატი ითვლება მხოლოდ ნაწილობრივ "
+"შესაბამისად."
+
+#. module: hr_recruitment_ai
+#: model_terms:ir.ui.view,arch_db:hr_recruitment_ai.hr_applicant_view_form_ai
+msgid ""
+"A ready-to-send invitation. Edit it freely, then send it with one click."
+msgstr ""
+"გაგზავნისათვის მზა მოსაწვევი. შესაძლებელია რედაქტირება; გაგზავნა - ერთი "
+"ღილაკით."
+
+#. module: hr_recruitment_ai
+#: model_terms:ir.ui.view,arch_db:hr_recruitment_ai.crm_case_tree_view_job_ai
+msgid "AI %"
+msgstr "AI %"
+
+#. module: hr_recruitment_ai
+#: model_terms:ir.ui.view,arch_db:hr_recruitment_ai.res_config_settings_view_form_ai
+msgid "AI CV Screening (local, free)"
+msgstr "CV-ების AI ანალიზი (ლოკალური, უფასო)"
+
+#. module: hr_recruitment_ai
+#. odoo-python
+#: code:addons/hr_recruitment_ai/models/hr_recruitment_ai_center.py:0
+#: model:ir.actions.act_window,name:hr_recruitment_ai.hr_recruitment_ai_center_action
+#: model_terms:ir.ui.view,arch_db:hr_recruitment_ai.hr_recruitment_ai_center_view_form
+msgid "AI CV analysis"
+msgstr "CV-ების AI ანალიზი"
+
+#. module: hr_recruitment_ai
+#: model:ir.model,name:hr_recruitment_ai.model_hr_recruitment_ai_center
+msgid "AI CV analysis page"
+msgstr "CV-ების AI ანალიზის გვერდი"
+
+#. module: hr_recruitment_ai
+#. odoo-python
+#: code:addons/hr_recruitment_ai/models/hr_applicant.py:0
+msgid "AI CV screening"
+msgstr "CV-ის AI ანალიზი"
+
+#. module: hr_recruitment_ai
+#. odoo-python
+#: code:addons/hr_recruitment_ai/models/ai_engine.py:0
+msgid "AI Match"
+msgstr "AI შესაბამისი"
+
+#. module: hr_recruitment_ai
+#: model:ir.model.fields,field_description:hr_recruitment_ai.field_hr_applicant__ai_score
+msgid "AI Match %"
+msgstr "AI შესაბამისობა %"
+
+#. module: hr_recruitment_ai
+#: model_terms:ir.ui.view,arch_db:hr_recruitment_ai.view_hr_job_form_ai
+msgid "AI Matches"
+msgstr "AI-ის შერჩეული კანდიდატები"
+
+#. module: hr_recruitment_ai
+#: model:ir.model.fields,field_description:hr_recruitment_ai.field_hr_job__ai_requirement_ids
+msgid "AI Requirements"
+msgstr "AI მოთხოვნები"
+
+#. module: hr_recruitment_ai
+#: model_terms:ir.ui.view,arch_db:hr_recruitment_ai.hr_applicant_view_form_ai
+#: model_terms:ir.ui.view,arch_db:hr_recruitment_ai.view_hr_job_form_ai
+msgid "AI Screening"
+msgstr "AI ანალიზი"
+
+#. module: hr_recruitment_ai
+#: model:ir.model.fields,field_description:hr_recruitment_ai.field_hr_applicant__ai_state
+msgid "AI Status"
+msgstr "AI სტატუსი"
+
+#. module: hr_recruitment_ai
+#: model:ir.model.fields,field_description:hr_recruitment_ai.field_hr_applicant__ai_summary
+msgid "AI Summary"
+msgstr "AI შეჯამება"
+
+#. module: hr_recruitment_ai
+#: model:ir.model.fields,field_description:hr_recruitment_ai.field_hr_applicant__ai_verdict
+#: model_terms:ir.ui.view,arch_db:hr_recruitment_ai.hr_applicant_view_search_bis_ai
+msgid "AI Verdict"
+msgstr "AI დასკვნა"
+
+#. module: hr_recruitment_ai
+#: model:ir.ui.menu,name:hr_recruitment_ai.menu_hr_recruitment_ai_center
+msgid "AI analysis"
+msgstr "AI ანალიზი"
+
+#. module: hr_recruitment_ai
+#. odoo-python
+#: code:addons/hr_recruitment_ai/models/ai_engine.py:0
+#: model:ir.model.fields,field_description:hr_recruitment_ai.field_hr_applicant_requirement_result__ai_status
+msgid "AI assessment"
+msgstr "AI-ის შეფასება"
+
+#. module: hr_recruitment_ai
+#. odoo-python
+#: code:addons/hr_recruitment_ai/models/ai_engine.py:0
+msgid "AI assessment: %s"
+msgstr "AI-ის შეფასება: %s"
+
+#. module: hr_recruitment_ai
+#. odoo-python
+#: code:addons/hr_recruitment_ai/models/hr_recruitment_ai_center.py:0
+msgid "AI engine ready: %s"
+msgstr "AI მზად არის: %s"
+
+#. module: hr_recruitment_ai
+#: model:ir.model.fields,field_description:hr_recruitment_ai.field_hr_applicant_requirement_result__ai_evidence
+msgid "AI explanation"
+msgstr "AI-ის განმარტება"
+
+#. module: hr_recruitment_ai
+#. odoo-python
+#: code:addons/hr_recruitment_ai/models/hr_recruitment_ai_center.py:0
+#: model_terms:ir.ui.view,arch_db:hr_recruitment_ai.view_hr_job_kanban_ai
+msgid "AI matches"
+msgstr "AI-ის შერჩეული"
+
+#. module: hr_recruitment_ai
+#. odoo-python
+#: code:addons/hr_recruitment_ai/models/hr_job.py:0
+msgid "AI matches - %s"
+msgstr "AI-ის შერჩეული კანდიდატები - %s"
+
+#. module: hr_recruitment_ai
+#: model:ir.model.fields,field_description:hr_recruitment_ai.field_hr_applicant__ai_report_html
+msgid "AI report"
+msgstr "AI ანგარიში"
+
+#. module: hr_recruitment_ai
+#: model:ir.model,name:hr_recruitment_ai.model_hr_applicant_requirement_result
+msgid "AI requirement check result"
+msgstr "AI მოთხოვნის შემოწმების შედეგი"
+
+#. module: hr_recruitment_ai
+#: model:ir.model.fields,field_description:hr_recruitment_ai.field_hr_applicant__ai_banner_html
+msgid "AI result banner"
+msgstr "AI შედეგის ბანერი"
+
+#. module: hr_recruitment_ai
+#. odoo-python
+#: code:addons/hr_recruitment_ai/models/hr_applicant.py:0
+msgid "AI screening finished"
+msgstr "AI ანალიზი დასრულდა"
+
+#. module: hr_recruitment_ai
+#. odoo-python
+#: code:addons/hr_recruitment_ai/models/hr_job.py:0
+msgid "AI screening queued"
+msgstr "AI ანალიზი: რიგში დაყენებულია"
+
+#. module: hr_recruitment_ai
+#: model_terms:ir.ui.view,arch_db:hr_recruitment_ai.hr_applicant_view_search_bis_ai
+msgid "AI: Match"
+msgstr "AI: შესაბამისი"
+
+#. module: hr_recruitment_ai
+#: model_terms:ir.ui.view,arch_db:hr_recruitment_ai.hr_applicant_view_search_bis_ai
+msgid "AI: No match"
+msgstr "AI: არ შეესაბამება"
+
+#. module: hr_recruitment_ai
+#: model_terms:ir.ui.view,arch_db:hr_recruitment_ai.hr_applicant_view_search_bis_ai
+msgid "AI: Not analyzed"
+msgstr "AI: ანალიზის გარეშე"
+
+#. module: hr_recruitment_ai
+#: model_terms:ir.ui.view,arch_db:hr_recruitment_ai.hr_applicant_view_search_bis_ai
+msgid "AI: Partial match"
+msgstr "AI: ნაწილობრივ შესაბამისი"
+
+#. module: hr_recruitment_ai
+#. odoo-python
+#: code:addons/hr_recruitment_ai/models/ai_engine.py:0
+msgid "About %(y)s years of relevant experience found (required %(n)s)."
+msgstr ""
+"CV-ში მოიძებნა დაახლოებით %(y)s წლის შესაბამისი გამოცდილება (მოთხოვნა: %(n)s"
+" წელი)."
+
+#. module: hr_recruitment_ai
+#. odoo-python
+#: code:addons/hr_recruitment_ai/models/hr_recruitment_ai_center.py:0
+msgid "Add at least one CV file (PDF, DOCX or TXT) first."
+msgstr "საჭიროა მინიმუმ ერთი CV ფაილი (PDF, DOCX ან TXT)."
+
+#. module: hr_recruitment_ai
+#: model_terms:ir.ui.view,arch_db:hr_recruitment_ai.res_config_settings_view_form_ai
+msgid "Advanced"
+msgstr "დამატებითი პარამეტრები"
+
+#. module: hr_recruitment_ai
+#: model:ir.model.fields,field_description:hr_recruitment_ai.field_hr_job__ai_matched_applicant_count
+msgid "Ai Matched Applicant Count"
+msgstr "AI-ის შერჩეული კანდიდატების რაოდენობა"
+
+#. module: hr_recruitment_ai
+#: model:ir.model.fields,field_description:hr_recruitment_ai.field_hr_job__ai_requirement_count
+msgid "Ai Requirement Count"
+msgstr "AI მოთხოვნების რაოდენობა"
+
+#. module: hr_recruitment_ai
+#: model_terms:ir.ui.view,arch_db:hr_recruitment_ai.hr_recruitment_ai_center_view_form
+msgid "All analysed"
+msgstr "ყველა გაანალიზებული"
+
+#. module: hr_recruitment_ai
+#: model:ir.model.fields,help:hr_recruitment_ai.field_hr_applicant_requirement_result__evidence
+msgid "All evidence as plain text, in the language of the analysis."
+msgstr "ყველა მტკიცებულება ტექსტის სახით, ანალიზის ენაზე."
+
+#. module: hr_recruitment_ai
+#: model_terms:ir.ui.view,arch_db:hr_recruitment_ai.hr_recruitment_ai_center_view_form
+msgid "Analyse new CVs"
+msgstr "ახალი CV-ების ანალიზი"
+
+#. module: hr_recruitment_ai
+#. odoo-python
+#: code:addons/hr_recruitment_ai/models/hr_recruitment_ai_center.py:0
+msgid "Analysed"
+msgstr "გაანალიზებული"
+
+#. module: hr_recruitment_ai
+#. odoo-python
+#: code:addons/hr_recruitment_ai/models/hr_recruitment_ai_center.py:0
+msgid "Analysed CVs"
+msgstr "გაანალიზებული CV-ები"
+
+#. module: hr_recruitment_ai
+#. odoo-python
+#: code:addons/hr_recruitment_ai/models/hr_applicant_report.py:0
+msgid "Analysis queued"
+msgstr "ანალიზი რიგში დაყენებულია"
+
+#. module: hr_recruitment_ai
+#. odoo-python
+#: code:addons/hr_recruitment_ai/models/hr_applicant.py:0
+#: code:addons/hr_recruitment_ai/models/hr_recruitment_ai_center.py:0
+msgid "Analysis started"
+msgstr "ანალიზი დაწყებულია"
+
+#. module: hr_recruitment_ai
+#: model_terms:ir.ui.view,arch_db:hr_recruitment_ai.hr_applicant_view_form_ai
+msgid "Analyze CV (AI)"
+msgstr "CV-ის ანალიზი (AI)"
+
+#. module: hr_recruitment_ai
+#: model:ir.model.fields.selection,name:hr_recruitment_ai.selection__hr_applicant__ai_state__done
+msgid "Analyzed"
+msgstr "გაანალიზებული"
+
+#. module: hr_recruitment_ai
+#: model:ir.model.fields,help:hr_recruitment_ai.field_res_config_settings__hr_recruitment_ai_chat_model
+msgid ""
+"Any model from ollama.com/library, e.g. gemma3:4b, gemma3:12b, qwen3:8b."
+msgstr ""
+"ნებისმიერი მოდელი ollama.com/library-დან, მაგ. gemma3:4b, gemma3:12b, "
+"qwen3:8b."
+
+#. module: hr_recruitment_ai
+#: model_terms:ir.ui.view,arch_db:hr_recruitment_ai.view_hr_job_form_ai
+msgid ""
+"Anything else the AI should consider: education, languages, certificates, "
+"soft skills, schedule, location..."
+msgstr ""
+"ყველაფერი, რაც AI-მ დამატებით უნდა გაითვალისწინოს: განათლება, ენები, "
+"სერტიფიკატები, პირადი უნარები, სამუშაო გრაფიკი, ადგილმდებარეობა..."
+
+#. module: hr_recruitment_ai
+#: model:ir.model,name:hr_recruitment_ai.model_hr_applicant
+#: model:ir.model.fields,field_description:hr_recruitment_ai.field_hr_applicant_requirement_result__applicant_id
+msgid "Applicant"
+msgstr "კანდიდატი"
+
+#. module: hr_recruitment_ai
+#: model:ir.model.fields,help:hr_recruitment_ai.field_hr_job__ai_match_threshold
+msgid ""
+"Applicants scoring at least this percentage (and missing no 'must have') are"
+" flagged as a match, auto-filled and get a 'Contact candidate' activity."
+msgstr ""
+"კანდიდატი, ვისი ქულა ამ ზღვარს აღწევს და ვის აუცილებელი მოთხოვნა არ აკლია, "
+"ითვლება შესაბამისად. შედეგი: ველების ავტომატური შევსება და დავალება "
+"„კანდიდატთან დაკავშირება“."
+
+#. module: hr_recruitment_ai
+#. odoo-python
+#: code:addons/hr_recruitment_ai/models/hr_applicant_report.py:0
+msgid ""
+"Attach a CV (PDF or DOCX) and it is analysed automatically, or use the "
+"\"Analyze CV (AI)\" button."
+msgstr ""
+"CV-ის (PDF ან DOCX) მიმაგრების შემდეგ ანალიზი ავტომატურად ხდება; "
+"დაუყოვნებლივ ანალიზისათვის - ღილაკი „CV-ის ანალიზი (AI)“."
+
+#. module: hr_recruitment_ai
+#. odoo-python
+#: code:addons/hr_recruitment_ai/models/hr_applicant_report.py:0
+msgid "Attach a CV (PDF or DOCX), or use the button on the right."
+msgstr "CV-ის (PDF ან DOCX) მიმაგრება ან მარჯვენა ღილაკის გამოყენება."
+
+#. module: hr_recruitment_ai
+#: model:ir.model,name:hr_recruitment_ai.model_ir_attachment
+msgid "Attachment"
+msgstr "დანართი"
+
+#. module: hr_recruitment_ai
+#. odoo-python
+#: code:addons/hr_recruitment_ai/models/hr_applicant.py:0
+msgid "Auto-filled"
+msgstr "ავტომატურად შევსებული"
+
+#. module: hr_recruitment_ai
+#. odoo-python
+#: code:addons/hr_recruitment_ai/models/hr_applicant.py:0
+msgid "Auto-filled: %s"
+msgstr "ავტომატურად შევსებული: %s"
+
+#. module: hr_recruitment_ai
+#: model:ir.model.fields,field_description:hr_recruitment_ai.field_hr_job__ai_auto_fill
+msgid "Auto-flag matches"
+msgstr "შესაბამისი კანდიდატების ავტომატური მონიშვნა"
+
+#. module: hr_recruitment_ai
+#: model:ir.model.fields,field_description:hr_recruitment_ai.field_hr_job__ai_avg_score
+msgid "Average AI match %"
+msgstr "AI შესაბამისობის საშუალო %"
+
+#. module: hr_recruitment_ai
+#: model:ir.model.fields,help:hr_recruitment_ai.field_res_config_settings__hr_recruitment_ai_overwrite_contacts
+msgid "By default the AI only fills empty name / email / phone fields."
+msgstr ""
+"ჩვეულებრივ AI მხოლოდ ცარიელ ველებს ავსებს (სახელი / ელ. ფოსტა / ტელეფონი)."
+
+#. module: hr_recruitment_ai
+#: model_terms:ir.ui.view,arch_db:hr_recruitment_ai.view_hr_job_form_ai
+msgid "By e-mail or upload. Every CV is read and scored automatically."
+msgstr ""
+"ელ. ფოსტით ან ჩატვირთვით. ყოველი CV-ის ანალიზი და შეფასება ავტომატურად "
+"ხდება."
+
+#. module: hr_recruitment_ai
+#. odoo-python
+#: code:addons/hr_recruitment_ai/models/hr_applicant.py:0
+msgid "CV"
+msgstr "CV"
+
+#. module: hr_recruitment_ai
+#: model:ir.model.fields,field_description:hr_recruitment_ai.field_hr_applicant__ai_cv_upload_name
+msgid "CV file name"
+msgstr "CV ფაილის დასახელება"
+
+#. module: hr_recruitment_ai
+#: model:ir.model.fields,field_description:hr_recruitment_ai.field_hr_recruitment_ai_center__attachment_ids
+msgid "CV files"
+msgstr "CV ფაილები"
+
+#. module: hr_recruitment_ai
+#. odoo-python
+#: code:addons/hr_recruitment_ai/models/ai_engine.py:0
+msgid "CV text truncated to %s characters for the models."
+msgstr "CV-ის ტექსტი მოდელებისათვის %s სიმბოლომდე შემცირდა."
+
+#. module: hr_recruitment_ai
+#: model:ir.model.fields,field_description:hr_recruitment_ai.field_hr_job__ai_analysed_count
+msgid "CVs analysed"
+msgstr "გაანალიზებული CV-ები"
+
+#. module: hr_recruitment_ai
+#: model_terms:ir.ui.view,arch_db:hr_recruitment_ai.view_hr_job_form_ai
+msgid "CVs arrive"
+msgstr "CV-ების შემოსვლა"
+
+#. module: hr_recruitment_ai
+#. odoo-python
+#: code:addons/hr_recruitment_ai/models/hr_recruitment_ai_center.py:0
+msgid "CVs in the queue"
+msgstr "CV-ები რიგში"
+
+#. module: hr_recruitment_ai
+#. odoo-python
+#: code:addons/hr_recruitment_ai/models/hr_recruitment_ai_center.py:0
+msgid "CVs in total"
+msgstr "CV-ები სულ"
+
+#. module: hr_recruitment_ai
+#: model:ir.model.fields,field_description:hr_recruitment_ai.field_hr_job__ai_pending_count
+msgid "CVs queued"
+msgstr "რიგში მყოფი CV-ები"
+
+#. module: hr_recruitment_ai
+#: model_terms:ir.ui.view,arch_db:hr_recruitment_ai.hr_recruitment_ai_center_view_form
+msgid "CVs that were never analysed, and the ones that failed."
+msgstr "ანალიზის გარეშე დარჩენილი CV-ები და შეცდომით დასრულებული ანალიზები."
+
+#. module: hr_recruitment_ai
+#. odoo-python
+#: code:addons/hr_recruitment_ai/models/hr_recruitment_ai_center.py:0
+msgid "CVs uploaded"
+msgstr "CV-ები ჩატვირთულია"
+
+#. module: hr_recruitment_ai
+#. odoo-python
+#: code:addons/hr_recruitment_ai/models/ai_engine.py:0
+msgid ""
+"Cannot reach Ollama at %(url)s (%(err)s). Is Ollama installed and running?"
+msgstr ""
+"Ollama-სთან კავშირი შეუძლებელია: %(url)s (%(err)s). Ollama დაინსტალირებული "
+"და გაშვებულია?"
+
+#. module: hr_recruitment_ai
+#: model:ir.model.fields,field_description:hr_recruitment_ai.field_res_config_settings__hr_recruitment_ai_chat_model
+msgid "Chat model"
+msgstr "LLM მოდელი"
+
+#. module: hr_recruitment_ai
+#: model_terms:ir.ui.view,arch_db:hr_recruitment_ai.hr_recruitment_ai_center_view_form
+msgid ""
+"Choose the job, add one or many files (PDF, DOCX, TXT). Each file becomes an"
+" applicant; the AI fills in the name and contacts from the CV."
+msgstr ""
+"ვაკანსიის არჩევა და ერთი ან რამდენიმე ფაილის (PDF, DOCX, TXT) დამატება. "
+"თითოეული ფაილი - ერთი კანდიდატი; სახელს და კონტაქტებს AI CV-იდან ავსებს."
+
+#. module: hr_recruitment_ai
+#: model:ir.model.fields,help:hr_recruitment_ai.field_hr_job_requirement__keywords
+msgid ""
+"Comma-separated words that prove this requirement when found in the CV, e.g."
+" 'python, django, flask, fastapi'. Leave empty to search for the requirement"
+" name itself."
+msgstr ""
+"მძიმეებით გამოყოფილი სიტყვები, რომელთა CV-ში მოძებნა ამ მოთხოვნის "
+"დადასტურებად ითვლება, მაგ. 'python, django, flask, fastapi'. ცარიელი ველის "
+"შემთხვევაში ძებნა ხდება მოთხოვნის დასახელებით."
+
+#. module: hr_recruitment_ai
+#: model:ir.model,name:hr_recruitment_ai.model_res_config_settings
+msgid "Config Settings"
+msgstr "კონფიგურაციის პარამეტრები"
+
+#. module: hr_recruitment_ai
+#. odoo-python
+#: code:addons/hr_recruitment_ai/models/hr_applicant.py:0
+#: model_terms:ir.ui.view,arch_db:hr_recruitment_ai.hr_applicant_view_form_ai
+msgid "Contact candidate"
+msgstr "კანდიდატთან დაკავშირება"
+
+#. module: hr_recruitment_ai
+#. odoo-python
+#: code:addons/hr_recruitment_ai/models/hr_applicant.py:0
+msgid "Contact candidate - AI match %s%%"
+msgstr "კანდიდატთან დაკავშირება - AI შესაბამისობა %s%%"
+
+#. module: hr_recruitment_ai
+#: model:ir.model.fields,field_description:hr_recruitment_ai.field_res_config_settings__hr_recruitment_ai_num_ctx
+msgid "Context window (tokens)"
+msgstr "კონტექსტის ფანჯარა (ტოკენები)"
+
+#. module: hr_recruitment_ai
+#: model:ir.model.fields,field_description:hr_recruitment_ai.field_hr_applicant_requirement_result__create_uid
+#: model:ir.model.fields,field_description:hr_recruitment_ai.field_hr_job_requirement__create_uid
+#: model:ir.model.fields,field_description:hr_recruitment_ai.field_hr_recruitment_ai_center__create_uid
+msgid "Created by"
+msgstr "ავტორი"
+
+#. module: hr_recruitment_ai
+#: model:ir.model.fields,field_description:hr_recruitment_ai.field_hr_applicant_requirement_result__create_date
+#: model:ir.model.fields,field_description:hr_recruitment_ai.field_hr_job_requirement__create_date
+#: model:ir.model.fields,field_description:hr_recruitment_ai.field_hr_recruitment_ai_center__create_date
+msgid "Created on"
+msgstr "შექმნის თარიღი"
+
+#. module: hr_recruitment_ai
+#: model:ir.model.fields,field_description:hr_recruitment_ai.field_res_config_settings__hr_recruitment_ai_default_threshold
+msgid "Default match threshold (%)"
+msgstr "შესაბამისობის სტანდარტული ზღვარი (%)"
+
+#. module: hr_recruitment_ai
+#: model_terms:ir.ui.view,arch_db:hr_recruitment_ai.res_config_settings_view_form_ai
+msgid "Defaults for jobs; each job can set its own threshold."
+msgstr ""
+"სტანდარტული პარამეტრები ვაკანსიებისათვის; თითოეულ ვაკანსიაზე შესაძლებელია "
+"საკუთარი ზღვარის მითითება."
+
+#. module: hr_recruitment_ai
+#: model_terms:ir.ui.view,arch_db:hr_recruitment_ai.hr_job_simple_form_ai
+msgid "Describe the job: responsibilities, team, conditions..."
+msgstr "ვაკანსიის აღწერა: მოვალეობები, გუნდი, პირობები..."
+
+#. module: hr_recruitment_ai
+#. odoo-python
+#: code:addons/hr_recruitment_ai/models/hr_applicant.py:0
+#: code:addons/hr_recruitment_ai/models/hr_applicant_report.py:0
+msgid "Details are on the AI tab."
+msgstr "დეტალები - AI გვერდზე."
+
+#. module: hr_recruitment_ai
+#: model:ir.model.fields,field_description:hr_recruitment_ai.field_hr_job_requirement__description
+msgid "Details for the AI"
+msgstr "დეტალები AI-ისათვის"
+
+#. module: hr_recruitment_ai
+#: model:ir.model.fields,field_description:hr_recruitment_ai.field_res_config_settings__hr_recruitment_ai_disable_thinking
+msgid "Disable 'thinking' mode"
+msgstr "„აზროვნების“ რეჟიმის გამორთვა"
+
+#. module: hr_recruitment_ai
+#: model:ir.model.fields,field_description:hr_recruitment_ai.field_hr_applicant__display_name
+#: model:ir.model.fields,field_description:hr_recruitment_ai.field_hr_applicant_requirement_result__display_name
+#: model:ir.model.fields,field_description:hr_recruitment_ai.field_hr_job__display_name
+#: model:ir.model.fields,field_description:hr_recruitment_ai.field_hr_job_requirement__display_name
+#: model:ir.model.fields,field_description:hr_recruitment_ai.field_hr_recruitment_ai_center__display_name
+#: model:ir.model.fields,field_description:hr_recruitment_ai.field_hr_recruitment_ai_engine__display_name
+#: model:ir.model.fields,field_description:hr_recruitment_ai.field_ir_attachment__display_name
+#: model:ir.model.fields,field_description:hr_recruitment_ai.field_res_config_settings__display_name
+#: model:ir.model.fields,field_description:hr_recruitment_ai.field_res_lang__display_name
+msgid "Display Name"
+msgstr "დასახელება"
+
+#. module: hr_recruitment_ai
+#. odoo-python
+#: code:addons/hr_recruitment_ai/models/ai_engine.py:0
+msgid "E-mail"
+msgstr "ელ. ფოსტა"
+
+#. module: hr_recruitment_ai
+#. odoo-python
+#: code:addons/hr_recruitment_ai/models/hr_applicant.py:0
+msgid "ERROR: %s"
+msgstr "შეცდომა: %s"
+
+#. module: hr_recruitment_ai
+#: model:ir.model.fields,field_description:hr_recruitment_ai.field_hr_applicant__ai_email_body
+msgid "Email draft"
+msgstr "წერილის პროექტი"
+
+#. module: hr_recruitment_ai
+#: model:ir.model.fields,field_description:hr_recruitment_ai.field_hr_applicant__ai_email_subject
+msgid "Email subject"
+msgstr "წერილის თემა"
+
+#. module: hr_recruitment_ai
+#. odoo-python
+#: code:addons/hr_recruitment_ai/models/ai_engine.py:0
+msgid "Embedding layer (%(model)s): compared against %(n)s CV chunks."
+msgstr "სემანტიკური ფენა (%(model)s): CV-ის %(n)s ნაწილთან შედარება დასრულდა."
+
+#. module: hr_recruitment_ai
+#. odoo-python
+#: code:addons/hr_recruitment_ai/models/ai_engine.py:0
+msgid "Embedding layer skipped: %s"
+msgstr "სემანტიკური ფენა გამოტოვებულია: %s"
+
+#. module: hr_recruitment_ai
+#: model:ir.model.fields,field_description:hr_recruitment_ai.field_res_config_settings__hr_recruitment_ai_embed_model
+msgid "Embedding model"
+msgstr "სემანტიკური მოდელი (embedding)"
+
+#. module: hr_recruitment_ai
+#: model:ir.model.fields,help:hr_recruitment_ai.field_res_config_settings__hr_recruitment_ai_disable_thinking
+msgid ""
+"Enable for reasoning models such as qwen3 or deepseek-r1 to answer faster."
+msgstr ""
+"ჩართვა რეკომენდებულია „მოაზროვნე“ მოდელებისათვის (qwen3, deepseek-r1) - "
+"პასუხი ჩქარდება."
+
+#. module: hr_recruitment_ai
+#. odoo-python
+#: code:addons/hr_recruitment_ai/models/hr_applicant.py:0
+msgid "Engine"
+msgstr "მეთოდი"
+
+#. module: hr_recruitment_ai
+#: model:ir.model.fields,field_description:hr_recruitment_ai.field_hr_applicant__ai_engine_log
+msgid "Engine log"
+msgstr "ანალიზის ჟურნალი"
+
+#. module: hr_recruitment_ai
+#: model:ir.model.fields.selection,name:hr_recruitment_ai.selection__res_config_settings__hr_recruitment_ai_language__en
+msgid "English"
+msgstr "ინგლისური"
+
+#. module: hr_recruitment_ai
+#: model:ir.model.fields.selection,name:hr_recruitment_ai.selection__hr_applicant__ai_state__error
+msgid "Error"
+msgstr "შეცდომა"
+
+#. module: hr_recruitment_ai
+#. odoo-python
+#: code:addons/hr_recruitment_ai/models/hr_recruitment_ai_center.py:0
+msgid "Every CV in Recruitment, scored against the criteria of its job."
+msgstr "რეკრუტინგის ყველა CV, შეფასებული თავისი ვაკანსიის კრიტერიუმებით."
+
+#. module: hr_recruitment_ai
+#. odoo-python
+#: code:addons/hr_recruitment_ai/models/hr_recruitment_ai_center.py:0
+msgid "Every CV is already analysed."
+msgstr "ყველა CV უკვე გაანალიზებულია."
+
+#. module: hr_recruitment_ai
+#: model_terms:ir.ui.view,arch_db:hr_recruitment_ai.res_config_settings_view_form_ai
+msgid ""
+"Every CV that lands on an applicant (e-mail alias, upload) is screened by "
+"the scheduler within two minutes."
+msgstr ""
+"კანდიდატს დამატებული ყოველი CV-ის (ელ. ფოსტა ან ჩატვირთვა) ავტომატური "
+"ანალიზი - ორ წუთის განმავლობაში."
+
+#. module: hr_recruitment_ai
+#: model_terms:ir.ui.view,arch_db:hr_recruitment_ai.hr_recruitment_ai_center_view_form
+msgid ""
+"Every CV will be analysed again, including the ones already done. Use this "
+"after changing a job's criteria. Continue?"
+msgstr ""
+"ყველა CV-ის განმეორებით ანალიზი, უკვე გაანალიზებულების ჩათვლით. გამოყენება -"
+" ვაკანსიის კრიტერიუმების შეცვლის შემდეგ. გაგრძელება?"
+
+#. module: hr_recruitment_ai
+#: model:ir.model.fields,field_description:hr_recruitment_ai.field_hr_applicant_requirement_result__evidence
+msgid "Evidence"
+msgstr "მტკიცებულება"
+
+#. module: hr_recruitment_ai
+#. odoo-python
+#: code:addons/hr_recruitment_ai/models/ai_engine.py:0
+msgid ""
+"Evidence check: %s claim(s) of the AI were not found in the CV and do not "
+"count."
+msgstr ""
+"მტკიცებულების შემოწმება: AI-ის %s მტკიცება CV-ში არ მოიძებნა და ქულაში არ "
+"შედის."
+
+#. module: hr_recruitment_ai
+#. odoo-python
+#: code:addons/hr_recruitment_ai/models/ai_engine.py:0
+msgid ""
+"Evidence check: %s requirement(s) got half credit at most, because none of "
+"their keywords is in the CV."
+msgstr ""
+"მტკიცებულების შემოწმება: %s მოთხოვნა - მაქსიმუმ ნახევარი ქულა, რადგან "
+"საკვანძო სიტყვები CV-ში არ მოიძებნა."
+
+#. module: hr_recruitment_ai
+#: model:ir.model.fields,field_description:hr_recruitment_ai.field_hr_applicant_requirement_result__sources
+msgid "Evidence from"
+msgstr "მტკიცებულების წყარო"
+
+#. module: hr_recruitment_ai
+#: model:ir.model.fields,field_description:hr_recruitment_ai.field_hr_applicant_requirement_result__ai_policy
+msgid "Evidence rule applied"
+msgstr "გამოყენებული წესი"
+
+#. module: hr_recruitment_ai
+#. odoo-python
+#: code:addons/hr_recruitment_ai/models/ai_engine.py:0
+msgid "Experience from the dates in the CV: %(years)s years (%(spans)s)."
+msgstr "გამოცდილება CV-ის თარიღების საფუძველზე: %(years)s წელი (%(spans)s)."
+
+#. module: hr_recruitment_ai
+#. odoo-python
+#: code:addons/hr_recruitment_ai/models/ai_engine.py:0
+msgid "Experience: at least %s years"
+msgstr "გამოცდილება: მინიმუმ %s წელი"
+
+#. module: hr_recruitment_ai
+#: model:ir.model.fields,field_description:hr_recruitment_ai.field_hr_applicant__ai_cv_text
+msgid "Extracted CV text"
+msgstr "CV-იდან ამოღებული ტექსტი"
+
+#. module: hr_recruitment_ai
+#. odoo-python
+#: code:addons/hr_recruitment_ai/models/hr_recruitment_ai_center.py:0
+#: model_terms:ir.ui.view,arch_db:hr_recruitment_ai.hr_recruitment_ai_center_view_form
+msgid "Failed"
+msgstr "შეცდომით"
+
+#. module: hr_recruitment_ai
+#. odoo-python
+#: code:addons/hr_recruitment_ai/models/hr_recruitment_ai_center.py:0
+msgid "Failed analyses"
+msgstr "შეცდომით დასრულებული ანალიზები"
+
+#. module: hr_recruitment_ai
+#: model_terms:ir.ui.view,arch_db:hr_recruitment_ai.res_config_settings_view_form_ai
+msgid ""
+"Finds requirements phrased differently than the keywords (multilingual)."
+msgstr ""
+"მოთხოვნების ძებნა შინაარსით, არ მხოლოდ საკვანძო სიტყვებით (მრავალენოვანი)."
+
+#. module: hr_recruitment_ai
+#. odoo-python
+#: code:addons/hr_recruitment_ai/models/hr_applicant_report.py:0
+msgid "Found in the CV:"
+msgstr "CV-ში მოიძებნა:"
+
+#. module: hr_recruitment_ai
+#: model_terms:ir.ui.view,arch_db:hr_recruitment_ai.hr_job_simple_form_ai
+msgid ""
+"Free-text requirements: education, languages, certificates, soft skills..."
+msgstr ""
+"მოთხოვნები თავისუფალი ტექსტით: განათლება, ენები, სერტიფიკატები, პირადი "
+"უნარები..."
+
+#. module: hr_recruitment_ai
+#. odoo-python
+#: code:addons/hr_recruitment_ai/models/ai_engine.py:0
+#: code:addons/hr_recruitment_ai/models/hr_applicant_report.py:0
+#: model:ir.model.fields,field_description:hr_recruitment_ai.field_hr_applicant__ai_gaps
+msgid "Gaps"
+msgstr "ხარვეზები"
+
+#. module: hr_recruitment_ai
+#: model:ir.model.fields.selection,name:hr_recruitment_ai.selection__res_config_settings__hr_recruitment_ai_language__ka
+msgid "Georgian"
+msgstr "ქართული"
+
+#. module: hr_recruitment_ai
+#. odoo-python
+#: code:addons/hr_recruitment_ai/models/hr_applicant_report.py:0
+msgid ""
+"Half credit at most: none of the keywords is in the CV, the AI only found it"
+" worded differently. Add that wording to the keywords if it should count "
+"fully."
+msgstr ""
+"მაქსიმუმ ნახევარი ქულა: CV-ში საკვანძო სიტყვები არ მოიძებნა; AI-მ მოთხოვნა "
+"მოიძებნა სხვა ფორმულირებით. სრული ქულისათვის - ამ ფორმულირების დამატება "
+"საკვანძო სიტყვებში."
+
+#. module: hr_recruitment_ai
+#. odoo-python
+#: code:addons/hr_recruitment_ai/models/hr_applicant_report.py:0
+msgid ""
+"How the %(score)s%% is calculated: %(gained)s of %(total)s points. A met "
+"requirement gives its full weight, a partly met one gives half."
+msgstr ""
+"%(score)s%% - გაანგარიშება: %(total)s ქულიდან %(gained)s. დაკმაყოფილებული "
+"მოთხოვნა - სრული წონა, ნაწილობრივ დაკმაყოფილებული - წონის ნახევარი."
+
+#. module: hr_recruitment_ai
+#: model:ir.model.fields,field_description:hr_recruitment_ai.field_hr_applicant__id
+#: model:ir.model.fields,field_description:hr_recruitment_ai.field_hr_applicant_requirement_result__id
+#: model:ir.model.fields,field_description:hr_recruitment_ai.field_hr_job__id
+#: model:ir.model.fields,field_description:hr_recruitment_ai.field_hr_job_requirement__id
+#: model:ir.model.fields,field_description:hr_recruitment_ai.field_hr_recruitment_ai_center__id
+#: model:ir.model.fields,field_description:hr_recruitment_ai.field_hr_recruitment_ai_engine__id
+#: model:ir.model.fields,field_description:hr_recruitment_ai.field_ir_attachment__id
+#: model:ir.model.fields,field_description:hr_recruitment_ai.field_res_config_settings__id
+#: model:ir.model.fields,field_description:hr_recruitment_ai.field_res_lang__id
+msgid "ID"
+msgstr "ID"
+
+#. module: hr_recruitment_ai
+#: model:ir.model.fields,help:hr_recruitment_ai.field_hr_job_requirement__mandatory
+msgid ""
+"If this is missing the applicant can only be a partial match, whatever the "
+"percentage."
+msgstr ""
+"ამ მოთხოვნის ნაკლებობის შემთხვევაში კანდიდატი, პროცენტის მიუხედავად, ითვლება"
+" მხოლოდ ნაწილობრივ შესაბამისად."
+
+#. module: hr_recruitment_ai
+#: model:ir.model.fields,help:hr_recruitment_ai.field_hr_job_requirement__weight
+msgid "Importance from 1 to 10. The match percentage is a weighted average."
+msgstr ""
+"მოთხოვნის წონა 1-დან 10-მდე. შესაბამისობის პროცენტი - შეწონილი საშუალო."
+
+#. module: hr_recruitment_ai
+#. odoo-python
+#: code:addons/hr_recruitment_ai/models/hr_recruitment_ai_center.py:0
+#: model_terms:ir.ui.view,arch_db:hr_recruitment_ai.hr_recruitment_ai_center_view_form
+msgid "In the queue"
+msgstr "რიგში"
+
+#. module: hr_recruitment_ai
+#: model:ir.model.fields,field_description:hr_recruitment_ai.field_hr_job_requirement__job_id
+msgid "Job"
+msgstr "ვაკანსია"
+
+#. module: hr_recruitment_ai
+#: model_terms:ir.ui.view,arch_db:hr_recruitment_ai.view_hr_job_kanban_ai
+msgid "Job Page"
+msgstr "ვაკანსიის გვერდი"
+
+#. module: hr_recruitment_ai
+#: model:ir.model,name:hr_recruitment_ai.model_hr_job
+msgid "Job Position"
+msgstr "ვაკანსია"
+
+#. module: hr_recruitment_ai
+#: model:ir.model,name:hr_recruitment_ai.model_hr_job_requirement
+msgid "Job Requirement (AI CV matching)"
+msgstr "ვაკანსიის მოთხოვნა (AI შედარება CV-სთან)"
+
+#. module: hr_recruitment_ai
+#: model:ir.model.fields,field_description:hr_recruitment_ai.field_hr_recruitment_ai_center__job_id
+msgid "Job position"
+msgstr "ვაკანსია"
+
+#. module: hr_recruitment_ai
+#: model:ir.model.fields,field_description:hr_recruitment_ai.field_hr_applicant_requirement_result__requirement_id
+msgid "Job requirement"
+msgstr "ვაკანსიის მოთხოვნა"
+
+#. module: hr_recruitment_ai
+#. odoo-python
+#: code:addons/hr_recruitment_ai/models/hr_applicant_report.py:0
+msgid "Job: %s"
+msgstr "ვაკანსია: %s"
+
+#. module: hr_recruitment_ai
+#. odoo-python
+#: code:addons/hr_recruitment_ai/models/hr_applicant_report.py:0
+msgid ""
+"Job: %s - it has no criteria yet, so the score is the AI's overall estimate."
+msgstr ""
+"ვაკანსია: %s - კრიტერიუმები მითითებული არ არის, ამიტომ ქულა AI-ის ზოგადი "
+"შეფასებაა."
+
+#. module: hr_recruitment_ai
+#: model_terms:ir.ui.view,arch_db:hr_recruitment_ai.res_config_settings_view_form_ai
+msgid ""
+"Judges each requirement, writes the summary and drafts the e-mail. Without "
+"it only keywords and embeddings are used."
+msgstr ""
+"თითოეული მოთხოვნის შეფასება, შეჯამების და წერილის პროექტის შედგენა. "
+"გამორთვის შემთხვევაში გამოყენებულია მხოლოდ საკვანძო სიტყვები და სემანტიკური "
+"შედარება."
+
+#. module: hr_recruitment_ai
+#: model:ir.model.fields,help:hr_recruitment_ai.field_res_config_settings__hr_recruitment_ai_embed_on_cpu
+msgid ""
+"Keeps the chat model resident on the GPU. On cards with 8 GB VRAM or less, "
+"loading both models on the GPU makes Ollama reload a model on every CV."
+msgstr ""
+"LLM მოდელი მუდმივად რჩება GPU-ის მეხსიერებაში. 8 GB-მდე VRAM-ის შემთხვევაში "
+"ორივე მოდელის GPU-ზე ჩატვირთვა იწვევს მოდელის განმეორებით ჩატვირთვას ყოველ "
+"CV-ზე."
+
+#. module: hr_recruitment_ai
+#. odoo-python
+#: code:addons/hr_recruitment_ai/models/ai_engine.py:0
+msgid "Keyword layer: %(hit)s of %(total)s requirements found by keywords."
+msgstr "საკვანძო სიტყვების ფენა: %(total)s მოთხოვნიდან %(hit)s მოიძებნა."
+
+#. module: hr_recruitment_ai
+#: model:ir.model.fields,field_description:hr_recruitment_ai.field_hr_job_requirement__keywords
+msgid "Keywords / synonyms"
+msgstr "საკვანძო სიტყვები / სინონიმები"
+
+#. module: hr_recruitment_ai
+#: model_terms:ir.ui.view,arch_db:hr_recruitment_ai.view_hr_job_form_ai
+msgid ""
+"Keywords are words that prove a skill when found in the CV (comma-separated,\n"
+"                                Georgian or English). Weight 1-10 sets its importance; \"Must have\" blocks a\n"
+"                                full match when missing."
+msgstr ""
+"საკვანძო სიტყვები - სიტყვები, რომელთა CV-ში მოძებნა უნარს ადასტურებს "
+"(მძიმეებით გამოყოფილი, ქართულად ან ინგლისურად). წონა 1-10 - მოთხოვნის "
+"მნიშვნელობა; „აუცილებელი“ - ნაკლებობის შემთხვევაში სრული შესაბამისობა "
+"გამორიცხულია."
+
+#. module: hr_recruitment_ai
+#: model_terms:ir.ui.view,arch_db:hr_recruitment_ai.hr_job_simple_form_ai
+msgid ""
+"Keywords are words that prove a skill when found in the CV (comma-separated,\n"
+"                            Georgian or English). Weight 1-10 sets its importance; \"Must have\" blocks a\n"
+"                            full match when missing."
+msgstr ""
+"საკვანძო სიტყვები - სიტყვები, რომელთა CV-ში მოძებნა უნარს ადასტურებს "
+"(მძიმეებით გამოყოფილი, ქართულად ან ინგლისურად). წონა 1-10 - მოთხოვნის "
+"მნიშვნელობა; „აუცილებელი“ - ნაკლებობის შემთხვევაში სრული შესაბამისობა "
+"გამორიცხულია."
+
+#. module: hr_recruitment_ai
+#: model:ir.model.fields,field_description:hr_recruitment_ai.field_hr_applicant_requirement_result__keywords_found
+msgid "Keywords found"
+msgstr "საკვანძო სიტყვები CV-ში"
+
+#. module: hr_recruitment_ai
+#. odoo-python
+#: code:addons/hr_recruitment_ai/models/ai_engine.py:0
+msgid "Keywords found: %s"
+msgstr "CV-ში მოიძებნა: %s"
+
+#. module: hr_recruitment_ai
+#. odoo-python
+#: code:addons/hr_recruitment_ai/models/hr_applicant.py:0
+msgid "LLM + embeddings"
+msgstr "LLM + სემანტიკური ანალიზი"
+
+#. module: hr_recruitment_ai
+#. odoo-python
+#: code:addons/hr_recruitment_ai/models/ai_engine.py:0
+msgid "LLM layer (%(model)s): answered in %(secs).1f s."
+msgstr "LLM ფენა (%(model)s): პასუხი %(secs).1f წამში."
+
+#. module: hr_recruitment_ai
+#. odoo-python
+#: code:addons/hr_recruitment_ai/models/ai_engine.py:0
+msgid "LLM layer skipped: %s"
+msgstr "LLM ფენა გამოტოვებულია: %s"
+
+#. module: hr_recruitment_ai
+#. odoo-python
+#: code:addons/hr_recruitment_ai/models/ai_engine.py:0
+msgid "LLM layer: broken answer (%s), retrying once."
+msgstr "LLM ფენა: დაზიანებული პასუხი (%s), განმეორებითი მცდელობა."
+
+#. module: hr_recruitment_ai
+#: model:ir.model.fields,field_description:hr_recruitment_ai.field_res_config_settings__hr_recruitment_ai_language
+msgid "Language of AI texts"
+msgstr "AI ტექსტების ენა"
+
+#. module: hr_recruitment_ai
+#: model:ir.model.fields,help:hr_recruitment_ai.field_res_config_settings__hr_recruitment_ai_language
+msgid "Language of the summary and the drafted e-mail."
+msgstr "შეჯამების და წერილის პროექტის ენა."
+
+#. module: hr_recruitment_ai
+#: model:ir.model,name:hr_recruitment_ai.model_res_lang
+msgid "Languages"
+msgstr "ენები"
+
+#. module: hr_recruitment_ai
+#: model:ir.model.fields,field_description:hr_recruitment_ai.field_hr_applicant__ai_last_run
+msgid "Last AI run"
+msgstr "AI-ის ბოლო ანალიზი"
+
+#. module: hr_recruitment_ai
+#: model:ir.model.fields,field_description:hr_recruitment_ai.field_hr_applicant_requirement_result__write_uid
+#: model:ir.model.fields,field_description:hr_recruitment_ai.field_hr_job_requirement__write_uid
+#: model:ir.model.fields,field_description:hr_recruitment_ai.field_hr_recruitment_ai_center__write_uid
+msgid "Last Updated by"
+msgstr "ბოლო შეცვლის ავტორი"
+
+#. module: hr_recruitment_ai
+#: model:ir.model.fields,field_description:hr_recruitment_ai.field_hr_applicant_requirement_result__write_date
+#: model:ir.model.fields,field_description:hr_recruitment_ai.field_hr_job_requirement__write_date
+#: model:ir.model.fields,field_description:hr_recruitment_ai.field_hr_recruitment_ai_center__write_date
+msgid "Last Updated on"
+msgstr "ბოლო შეცვლის თარიღი"
+
+#. module: hr_recruitment_ai
+#. odoo-python
+#: code:addons/hr_recruitment_ai/models/hr_applicant_report.py:0
+msgid "Last analysis"
+msgstr "ბოლო ანალიზი"
+
+#. module: hr_recruitment_ai
+#. odoo-python
+#: code:addons/hr_recruitment_ai/models/hr_recruitment_ai_center.py:0
+msgid "Latest results"
+msgstr "ბოლო შედეგები"
+
+#. module: hr_recruitment_ai
+#: model:ir.model.fields,field_description:hr_recruitment_ai.field_res_config_settings__hr_recruitment_ai_llm_email
+msgid "Let the AI write the invitation e-mail"
+msgstr "მოსაწვევი წერილის AI-ის მიერ შედგენა"
+
+#. module: hr_recruitment_ai
+#: model_terms:ir.ui.view,arch_db:hr_recruitment_ai.view_hr_job_form_ai
+msgid "List the skills, the experience and the must-haves below."
+msgstr "უნარების, გამოცდილების და აუცილებელი მოთხოვნების სია - ქვემოთ."
+
+#. module: hr_recruitment_ai
+#: model_terms:ir.ui.view,arch_db:hr_recruitment_ai.res_config_settings_view_form_ai
+msgid "Local AI engine (Ollama)"
+msgstr "ლოკალური AI (Ollama)"
+
+#. module: hr_recruitment_ai
+#: model:ir.model,name:hr_recruitment_ai.model_hr_recruitment_ai_engine
+msgid "Local AI engine for CV screening (regex + embeddings + Ollama)"
+msgstr "CV-ების ანალიზის ლოკალური AI (regex + embeddings + Ollama)"
+
+#. module: hr_recruitment_ai
+#. odoo-python
+#: code:addons/hr_recruitment_ai/models/hr_applicant.py:0
+#: model:ir.model.fields.selection,name:hr_recruitment_ai.selection__hr_applicant__ai_verdict__match
+msgid "Match"
+msgstr "შესაბამისი"
+
+#. module: hr_recruitment_ai
+#: model:ir.model.fields,field_description:hr_recruitment_ai.field_hr_job__ai_match_threshold
+msgid "Match threshold (%)"
+msgstr "შესაბამისობის ზღვარი (%)"
+
+#. module: hr_recruitment_ai
+#. odoo-python
+#: code:addons/hr_recruitment_ai/models/hr_recruitment_ai_center.py:0
+#: model_terms:ir.ui.view,arch_db:hr_recruitment_ai.hr_recruitment_ai_center_view_form
+msgid "Matches"
+msgstr "შესაბამისი"
+
+#. module: hr_recruitment_ai
+#: model_terms:ir.ui.view,arch_db:hr_recruitment_ai.view_hr_job_form_ai
+msgid ""
+"Matches are flagged, contacts are filled in and an invitation is drafted."
+msgstr ""
+"შესაბამისი კანდიდატების მონიშვნა, კონტაქტების შევსება და მოსაწვევის პროექტი."
+
+#. module: hr_recruitment_ai
+#: model_terms:ir.ui.view,arch_db:hr_recruitment_ai.res_config_settings_view_form_ai
+msgid "Matching & language"
+msgstr "შესაბამისობა და ენა"
+
+#. module: hr_recruitment_ai
+#: model:ir.model.fields,field_description:hr_recruitment_ai.field_res_config_settings__hr_recruitment_ai_max_chars
+msgid "Max CV characters sent to the model"
+msgstr "CV-ის სიმბოლოების მაქსიმალური რაოდენობა მოდელისათვის"
+
+#. module: hr_recruitment_ai
+#: model:ir.model.fields.selection,name:hr_recruitment_ai.selection__hr_applicant_requirement_result__ai_status__met
+#: model:ir.model.fields.selection,name:hr_recruitment_ai.selection__hr_applicant_requirement_result__status__met
+msgid "Met"
+msgstr "დაკმაყოფილებული"
+
+#. module: hr_recruitment_ai
+#: model:ir.model.fields,field_description:hr_recruitment_ai.field_hr_job__ai_min_experience_years
+msgid "Minimum experience (years)"
+msgstr "მინიმალური გამოცდილება (წელი)"
+
+#. module: hr_recruitment_ai
+#. odoo-python
+#: code:addons/hr_recruitment_ai/models/ai_engine.py:0
+msgid "Minimum experience not checked (LLM unavailable)."
+msgstr "მინიმალური გამოცდილება არ შემოწმდა (LLM მიუწვდომელია)."
+
+#. module: hr_recruitment_ai
+#: model:ir.model.fields,field_description:hr_recruitment_ai.field_hr_applicant__ai_mandatory_missing
+msgid "Missing a must-have"
+msgstr "აკლია აუცილებელი მოთხოვნა"
+
+#. module: hr_recruitment_ai
+#: model:ir.model.fields,field_description:hr_recruitment_ai.field_hr_applicant__ai_llm_score
+msgid "Model's own estimate %"
+msgstr "მოდელის ზოგადი შეფასება %"
+
+#. module: hr_recruitment_ai
+#: model:ir.model.fields,field_description:hr_recruitment_ai.field_hr_job__ai_match_stage_id
+msgid "Move matches to stage"
+msgstr "შესაბამისი კანდიდატების გადაყვანა ეტაპზე"
+
+#. module: hr_recruitment_ai
+#: model:ir.model.fields,help:hr_recruitment_ai.field_res_config_settings__hr_recruitment_ai_embed_model
+msgid "Multilingual embedding model used for semantic requirement matching."
+msgstr "მრავალენოვანი მოდელი მოთხოვნების სემანტიკური შედარებისათვის."
+
+#. module: hr_recruitment_ai
+#. odoo-python
+#: code:addons/hr_recruitment_ai/models/hr_applicant_report.py:0
+#: model:ir.model.fields,field_description:hr_recruitment_ai.field_hr_applicant_requirement_result__mandatory
+#: model:ir.model.fields,field_description:hr_recruitment_ai.field_hr_job_requirement__mandatory
+msgid "Must have"
+msgstr "აუცილებელი"
+
+#. module: hr_recruitment_ai
+#: model:ir.model.fields,field_description:hr_recruitment_ai.field_hr_applicant__ai_name_is_placeholder
+msgid "Name is a placeholder"
+msgstr "სახელი დროებითია"
+
+#. module: hr_recruitment_ai
+#. odoo-python
+#: code:addons/hr_recruitment_ai/models/hr_recruitment_ai_center.py:0
+msgid "New applicant"
+msgstr "ახალი კანდიდატი"
+
+#. module: hr_recruitment_ai
+#: model_terms:ir.ui.view,arch_db:hr_recruitment_ai.view_hr_job_kanban_ai
+msgid "New applications"
+msgstr "ახალი განაცხადები"
+
+#. module: hr_recruitment_ai
+#. odoo-python
+#: code:addons/hr_recruitment_ai/models/hr_applicant_report.py:0
+msgid "No AI analysis yet"
+msgstr "AI ანალიზი ჩატარებული არ არის"
+
+#. module: hr_recruitment_ai
+#. odoo-python
+#: code:addons/hr_recruitment_ai/models/hr_recruitment_ai_center.py:0
+msgid "No CVs yet. Upload some below, or let them arrive by e-mail."
+msgstr "CV-ები არ არის. ჩატვირთვა - ქვემოთ, ან შემოსვლა ელ. ფოსტით."
+
+#. module: hr_recruitment_ai
+#. odoo-python
+#: code:addons/hr_recruitment_ai/models/ai_engine.py:0
+msgid "No experience duration could be read from the CV."
+msgstr "CV-იდან გამოცდილების ხანგრძლივობა არ დადგინდა."
+
+#. module: hr_recruitment_ai
+#. odoo-python
+#: code:addons/hr_recruitment_ai/models/hr_recruitment_ai_center.py:0
+msgid "No job"
+msgstr "ვაკანსიის გარეშე"
+
+#. module: hr_recruitment_ai
+#. odoo-python
+#: code:addons/hr_recruitment_ai/models/hr_applicant_report.py:0
+msgid "No job selected - the score is the AI's overall estimate."
+msgstr "ვაკანსია არჩეული არ არის - ქულა AI-ის ზოგადი შეფასებაა."
+
+#. module: hr_recruitment_ai
+#: model:ir.model.fields.selection,name:hr_recruitment_ai.selection__hr_applicant__ai_verdict__no_match
+msgid "No match"
+msgstr "არ შეესაბამება"
+
+#. module: hr_recruitment_ai
+#. odoo-python
+#: code:addons/hr_recruitment_ai/models/hr_applicant.py:0
+msgid ""
+"No readable CV found on this applicant. Attach a PDF or DOCX; scanned images"
+" need OCR first."
+msgstr ""
+"ამ კანდიდატთან ტექსტური CV არ მოიძებნა. საჭიროა PDF ან DOCX ფაილი; "
+"სკანირებული სურათებისათვის პირველ რიგში OCR საჭიროა."
+
+#. module: hr_recruitment_ai
+#. odoo-python
+#: code:addons/hr_recruitment_ai/models/ai_engine.py:0
+msgid ""
+"No structured requirements on the job - using the AI overall fit score."
+msgstr ""
+"ვაკანსიაზე მოთხოვნების სია არ არის - გამოყენებულია AI-ის ზოგადი შეფასება."
+
+#. module: hr_recruitment_ai
+#. odoo-python
+#: code:addons/hr_recruitment_ai/models/hr_recruitment_ai_center.py:0
+msgid "Not analysed yet"
+msgstr "ანალიზის გარეშე"
+
+#. module: hr_recruitment_ai
+#: model:ir.model.fields.selection,name:hr_recruitment_ai.selection__hr_applicant__ai_state__none
+msgid "Not analyzed"
+msgstr "ანალიზის გარეშე"
+
+#. module: hr_recruitment_ai
+#: model:ir.model.fields.selection,name:hr_recruitment_ai.selection__hr_applicant_requirement_result__ai_status__not_met
+#: model:ir.model.fields.selection,name:hr_recruitment_ai.selection__hr_applicant_requirement_result__status__not_met
+msgid "Not met"
+msgstr "დაკმაყოფილებული არ არის"
+
+#. module: hr_recruitment_ai
+#. odoo-python
+#: code:addons/hr_recruitment_ai/models/hr_applicant.py:0
+#: code:addons/hr_recruitment_ai/models/hr_applicant_report.py:0
+#: code:addons/hr_recruitment_ai/models/hr_recruitment_ai_center.py:0
+msgid "Not scored"
+msgstr "ქულა არ მიენიჭა"
+
+#. module: hr_recruitment_ai
+#. odoo-python
+#: code:addons/hr_recruitment_ai/models/hr_applicant_report.py:0
+msgid "Nothing about this was found in the CV."
+msgstr "CV-ში ამის შესახებ არაფერი არ მოიძებნა."
+
+#. module: hr_recruitment_ai
+#. odoo-python
+#: code:addons/hr_recruitment_ai/models/hr_applicant_report.py:0
+msgid "Nothing noted."
+msgstr "შენიშვნები არ არის."
+
+#. module: hr_recruitment_ai
+#. odoo-python
+#: code:addons/hr_recruitment_ai/models/hr_recruitment_ai_center.py:0
+msgid "Nothing to do"
+msgstr "შესასრულებელი არ არის"
+
+#. module: hr_recruitment_ai
+#. odoo-python
+#: code:addons/hr_recruitment_ai/models/ai_engine.py:0
+msgid "Nothing to score: add requirements to the job or start Ollama."
+msgstr ""
+"შეფასება შეუძლებელია: საჭიროა ვაკანსიაზე მოთხოვნების დამატება ან Ollama-ს "
+"გაშვება."
+
+#. module: hr_recruitment_ai
+#: model:ir.model.fields,help:hr_recruitment_ai.field_res_config_settings__hr_recruitment_ai_llm_email
+msgid ""
+"Off (recommended for Georgian): a fixed, personalised template in the chosen"
+" language is used. On: the local model writes the e-mail itself; small "
+"models produce poor Georgian."
+msgstr ""
+"გამორთული (რეკომენდებულია ქართული ენისათვის): გამოყენებულია წერილის "
+"ფიქსირებული შაბლონი არჩეულ ენაზე. ჩართული: წერილს წერს ლოკალური მოდელი; "
+"პატარა მოდელები ქართულად შეცდომებით წერენ."
+
+#. module: hr_recruitment_ai
+#: model:ir.model.fields,field_description:hr_recruitment_ai.field_res_config_settings__hr_recruitment_ai_ollama_url
+msgid "Ollama URL"
+msgstr "Ollama URL"
+
+#. module: hr_recruitment_ai
+#. odoo-python
+#: code:addons/hr_recruitment_ai/models/res_config_settings.py:0
+msgid "Ollama connection"
+msgstr "Ollama-სთან კავშირი"
+
+#. module: hr_recruitment_ai
+#. odoo-python
+#: code:addons/hr_recruitment_ai/models/ai_engine.py:0
+msgid "Ollama is reachable at %(url)s. Models ready: %(models)s."
+msgstr "Ollama-სთან კავშირი დამყარებულია: %(url)s. მზა მოდელები: %(models)s."
+
+#. module: hr_recruitment_ai
+#. odoo-python
+#: code:addons/hr_recruitment_ai/models/hr_recruitment_ai_center.py:0
+msgid "Ollama is running, but the model %s is not downloaded yet."
+msgstr "Ollama გაშვებულია, მაგრამ მოდელი %s ჩამოტვირთული არ არის."
+
+#. module: hr_recruitment_ai
+#. odoo-python
+#: code:addons/hr_recruitment_ai/models/ai_engine.py:0
+msgid ""
+"Ollama is running, but these models are not downloaded yet: %(models)s. Run "
+"in a terminal: %(cmd)s"
+msgstr ""
+"Ollama გაშვებულია, მაგრამ საჭიროა მოდელების ჩამოტვირთვა: %(models)s. "
+"ბრძანება ტერმინალში: %(cmd)s"
+
+#. module: hr_recruitment_ai
+#. odoo-python
+#: code:addons/hr_recruitment_ai/models/ai_engine.py:0
+msgid "Ollama not reachable at %s - using keyword matching only."
+msgstr ""
+"Ollama მიუწვდომელია (%s) - გამოყენებულია მხოლოდ საკვანძო სიტყვების შედარება."
+
+#. module: hr_recruitment_ai
+#: model_terms:ir.ui.view,arch_db:hr_recruitment_ai.res_config_settings_view_form_ai
+msgid "Only change these if CVs are cut short or the GPU runs out of memory."
+msgstr ""
+"შეცვლა რეკომენდებულია მხოლოდ CV-ების შემოკლების ან GPU-ის მეხსიერების "
+"ნაკლებობის შემთხვევაში."
+
+#. module: hr_recruitment_ai
+#: model:ir.model.fields,help:hr_recruitment_ai.field_hr_job_requirement__description
+msgid ""
+"Optional clarification the AI reads when judging, e.g. '3+ years of "
+"commercial experience, not only courses'."
+msgstr ""
+"დამატებითი მითითება AI-ისათვის, მაგ. '3+ წლის კომერციული გამოცდილება, არ "
+"მხოლოდ კურსები'."
+
+#. module: hr_recruitment_ai
+#: model:ir.model.fields,help:hr_recruitment_ai.field_hr_job__ai_match_stage_id
+msgid "Optional. Only applicants still in the first stage are moved."
+msgstr ""
+"არ აუცილებელია. გადაყვანა ხდება მხოლოდ პირველ ეტაპზე მყოფ კანდიდატებისათვის."
+
+#. module: hr_recruitment_ai
+#: model:ir.model.fields,field_description:hr_recruitment_ai.field_res_config_settings__hr_recruitment_ai_overwrite_contacts
+msgid "Overwrite existing contact details"
+msgstr "არსებული საკონტაქტო მონაცემების გადაწერა"
+
+#. module: hr_recruitment_ai
+#: model:ir.model.fields.selection,name:hr_recruitment_ai.selection__hr_applicant_requirement_result__ai_status__partial
+#: model:ir.model.fields.selection,name:hr_recruitment_ai.selection__hr_applicant_requirement_result__status__partial
+msgid "Partial"
+msgstr "ნაწილობრივ"
+
+#. module: hr_recruitment_ai
+#: model:ir.model.fields.selection,name:hr_recruitment_ai.selection__hr_applicant__ai_verdict__partial
+msgid "Partial match"
+msgstr "ნაწილობრივ შესაბამისი"
+
+#. module: hr_recruitment_ai
+#: model:ir.model.fields,field_description:hr_recruitment_ai.field_hr_recruitment_ai_center__pending_count
+msgid "Pending Count"
+msgstr "რიგში მყოფი CV-ების რაოდენობა"
+
+#. module: hr_recruitment_ai
+#: model:ir.model.fields,field_description:hr_recruitment_ai.field_res_config_settings__hr_recruitment_ai_proofread
+msgid "Proofread the AI summary (second pass)"
+msgstr "AI შეჯამების ორთოგრაფიის შემოწმება (მეორე ეტაპი)"
+
+#. module: hr_recruitment_ai
+#. odoo-python
+#: code:addons/hr_recruitment_ai/models/ai_engine.py:0
+msgid "Proofreading pass skipped: %s"
+msgstr "ორთოგრაფიის შემოწმება გამოტოვებულია: %s"
+
+#. module: hr_recruitment_ai
+#. odoo-python
+#: code:addons/hr_recruitment_ai/models/ai_engine.py:0
+msgid "Proofreading pass: answer discarded (empty or too long)."
+msgstr "ორთოგრაფიის შემოწმება: პასუხი უარყოფილია (ცარიელი ან ძალზე გრძელი)."
+
+#. module: hr_recruitment_ai
+#. odoo-python
+#: code:addons/hr_recruitment_ai/models/ai_engine.py:0
+msgid "Proofreading pass: done in %.1f s."
+msgstr "ორთოგრაფიის შემოწმება: დასრულდა %.1f წამში."
+
+#. module: hr_recruitment_ai
+#: model_terms:ir.ui.view,arch_db:hr_recruitment_ai.view_hr_job_form_ai
+msgid ""
+"Queue every applicant of this job that has a CV file for a fresh AI "
+"screening."
+msgstr ""
+"ამ ვაკანსიის ყველა კანდიდატის (CV ფაილით) რიგში დაყენება AI-ის განმეორებით "
+"ანალიზისათვის."
+
+#. module: hr_recruitment_ai
+#: model:ir.model.fields.selection,name:hr_recruitment_ai.selection__hr_applicant__ai_state__pending
+msgid "Queued"
+msgstr "რიგში"
+
+#. module: hr_recruitment_ai
+#: model:ir.model.fields,field_description:hr_recruitment_ai.field_hr_applicant_requirement_result__ai_quote
+msgid "Quote from the CV"
+msgstr "ციტატა CV-იდან"
+
+#. module: hr_recruitment_ai
+#: model:ir.model.fields,help:hr_recruitment_ai.field_res_config_settings__hr_recruitment_ai_num_ctx
+msgid "Raise if long CVs get cut; lower if the GPU runs out of memory."
+msgstr ""
+"გაზრდა: გრძელი CV-ების შემოკლების შემთხვევაში. შემცირება: GPU-ის მეხსიერების"
+" ნაკლებობის შემთხვევაში."
+
+#. module: hr_recruitment_ai
+#: model_terms:ir.ui.view,arch_db:hr_recruitment_ai.hr_recruitment_ai_center_view_form
+msgid "Re-analyse every CV"
+msgstr "ყველა CV-ის განმეორებით ანალიზი"
+
+#. module: hr_recruitment_ai
+#: model_terms:ir.ui.view,arch_db:hr_recruitment_ai.view_hr_job_form_ai
+msgid "Re-evaluate all applicants"
+msgstr "ყველა კანდიდატის განმეორებით შეფასება"
+
+#. module: hr_recruitment_ai
+#: model:ir.model.fields,field_description:hr_recruitment_ai.field_hr_recruitment_ai_center__recent_html
+msgid "Recent Html"
+msgstr "ბოლო შედეგები (HTML)"
+
+#. module: hr_recruitment_ai
+#: model:ir.actions.server,name:hr_recruitment_ai.ir_cron_hr_recruitment_ai_process_ir_actions_server
+msgid "Recruitment AI: screen queued CVs"
+msgstr "AI: რიგში მყოფი CV-ების ანალიზი"
+
+#. module: hr_recruitment_ai
+#: model_terms:ir.ui.view,arch_db:hr_recruitment_ai.hr_recruitment_ai_center_view_form
+msgid "Refresh"
+msgstr "განახლება"
+
+#. module: hr_recruitment_ai
+#. odoo-python
+#: code:addons/hr_recruitment_ai/models/ai_engine.py:0
+msgid "Regex contacts: %s"
+msgstr "კონტაქტები (regex): %s"
+
+#. module: hr_recruitment_ai
+#: model:ir.model.fields,help:hr_recruitment_ai.field_hr_job__ai_min_experience_years
+msgid ""
+"Required years of relevant professional experience. Treated as a must-have "
+"requirement judged from the CV; 0 = not required."
+msgstr ""
+"აუცილებელი პროფესიული გამოცდილება წლებში. ითვლება აუცილებელ მოთხოვნად; "
+"შეფასება ხდება CV-ის საფუძველზე. 0 = მოთხოვნა არ არის."
+
+#. module: hr_recruitment_ai
+#: model:ir.model.fields,field_description:hr_recruitment_ai.field_hr_applicant_requirement_result__name
+#: model:ir.model.fields,field_description:hr_recruitment_ai.field_hr_job_requirement__name
+msgid "Requirement"
+msgstr "მოთხოვნა"
+
+#. module: hr_recruitment_ai
+#. odoo-python
+#: code:addons/hr_recruitment_ai/models/hr_applicant_report.py:0
+#: model:ir.model.fields,field_description:hr_recruitment_ai.field_hr_applicant__ai_requirement_result_ids
+msgid "Requirement checks"
+msgstr "მოთხოვნების შემოწმება"
+
+#. module: hr_recruitment_ai
+#. odoo-python
+#: code:addons/hr_recruitment_ai/models/hr_job_requirement.py:0
+msgid "Requirement weight must be between 1 and 10."
+msgstr "მოთხოვნის წონა 1-დან 10-მდე უნდა იყოს."
+
+#. module: hr_recruitment_ai
+#. odoo-python
+#: code:addons/hr_recruitment_ai/models/hr_applicant_report.py:0
+msgid "Requirements met"
+msgstr "დაკმაყოფილებული მოთხოვნები"
+
+#. module: hr_recruitment_ai
+#: model:ir.model.fields,field_description:hr_recruitment_ai.field_res_config_settings__hr_recruitment_ai_embed_on_cpu
+msgid "Run the embedding model on the CPU"
+msgstr "სემანტიკური მოდელის CPU-ზე გაშვება"
+
+#. module: hr_recruitment_ai
+#: model:ir.model.fields,help:hr_recruitment_ai.field_res_config_settings__hr_recruitment_ai_proofread
+msgid ""
+"Runs a second, short model pass that fixes spelling in the chosen language. "
+"Adds a few seconds per CV. Words from other alphabets are always removed."
+msgstr ""
+"მოდელის მეორე, მოკლე გაშვება ორთოგრაფიის შესწორებისათვის არჩეულ ენაზე. ყოველ"
+" CV-ის ანალიზი რამდენიმე წამით გრძელდება. სხვა ალფაბეტის სიტყვები ყოველთვის "
+"იშლება."
+
+#. module: hr_recruitment_ai
+#: model_terms:ir.ui.view,arch_db:hr_recruitment_ai.res_config_settings_view_form_ai
+msgid ""
+"Runs on this machine. No API key, no credits, CVs never leave the server."
+msgstr ""
+"მუშაობს ამ კომპიუტერზე. API გასაღები და კრედიტები საჭირო არ არის; CV-ები "
+"სერვერის გარეთ არ გადაიცემა."
+
+#. module: hr_recruitment_ai
+#: model:ir.model.fields.selection,name:hr_recruitment_ai.selection__res_config_settings__hr_recruitment_ai_language__ru
+msgid "Russian"
+msgstr "რუსული"
+
+#. module: hr_recruitment_ai
+#: model_terms:ir.ui.view,arch_db:hr_recruitment_ai.view_hr_job_form_ai
+msgid "Say what you need"
+msgstr "მოთხოვნების მითითება"
+
+#. module: hr_recruitment_ai
+#: model:ir.model.fields,field_description:hr_recruitment_ai.field_hr_applicant_requirement_result__score
+msgid "Score"
+msgstr "ქულა"
+
+#. module: hr_recruitment_ai
+#: model:ir.model.fields,field_description:hr_recruitment_ai.field_res_config_settings__hr_recruitment_ai_auto_run
+msgid "Screen new CVs automatically"
+msgstr "ახალი CV-ების ავტომატური ანალიზი"
+
+#. module: hr_recruitment_ai
+#: model:ir.model.fields,field_description:hr_recruitment_ai.field_hr_applicant_requirement_result__similarity_counts
+msgid "Semantic match counted"
+msgstr "სემანტიკური შესაბამისობა გათვალისწინებულია"
+
+#. module: hr_recruitment_ai
+#. odoo-python
+#: code:addons/hr_recruitment_ai/models/ai_engine.py:0
+msgid "Semantic match: %s%%"
+msgstr "სემანტიკური შესაბამისობა: %s%%"
+
+#. module: hr_recruitment_ai
+#: model:ir.model.fields,field_description:hr_recruitment_ai.field_hr_applicant_requirement_result__similarity
+msgid "Semantic similarity"
+msgstr "სემანტიკური მსგავსება"
+
+#. module: hr_recruitment_ai
+#: model:ir.model.fields,field_description:hr_recruitment_ai.field_hr_applicant_requirement_result__sequence
+#: model:ir.model.fields,field_description:hr_recruitment_ai.field_hr_job_requirement__sequence
+msgid "Sequence"
+msgstr "თანმიმდევრობა"
+
+#. module: hr_recruitment_ai
+#: model:ir.model.fields,help:hr_recruitment_ai.field_hr_applicant__ai_name_is_placeholder
+msgid ""
+"Set for applicants created from an uploaded file: the name is only the file "
+"name, so the AI replaces it with the name found in the CV."
+msgstr ""
+"ჩატვირთული ფაილიდან შექმნილი კანდიდატი: სახელი დროებითია (ფაილის "
+"დასახელება); ჩანაცვლება - CV-ში მითითებული სახელით, AI-ის მიერ."
+
+#. module: hr_recruitment_ai
+#. odoo-python
+#: code:addons/hr_recruitment_ai/models/hr_applicant_report.py:0
+msgid "Similar wording found in the CV (semantic match %s%%)."
+msgstr ""
+"CV-ში მოიძებნა მსგავსი შინაარსის ტექსტი (სემანტიკური შესაბამისობა %s%%)."
+
+#. module: hr_recruitment_ai
+#: model_terms:ir.ui.view,arch_db:hr_recruitment_ai.hr_recruitment_ai_center_view_form
+msgid "Spontaneous application"
+msgstr "განაცხადი ვაკანსიის გარეშე"
+
+#. module: hr_recruitment_ai
+#: model:ir.model.fields,field_description:hr_recruitment_ai.field_hr_recruitment_ai_center__stats_html
+msgid "Stats Html"
+msgstr "სტატისტიკა (HTML)"
+
+#. module: hr_recruitment_ai
+#: model:ir.model.fields,field_description:hr_recruitment_ai.field_hr_applicant_requirement_result__status
+msgid "Status"
+msgstr "სტატუსი"
+
+#. module: hr_recruitment_ai
+#. odoo-python
+#: code:addons/hr_recruitment_ai/models/ai_engine.py:0
+#: code:addons/hr_recruitment_ai/models/hr_applicant_report.py:0
+#: model:ir.model.fields,field_description:hr_recruitment_ai.field_hr_applicant__ai_strengths
+msgid "Strengths"
+msgstr "ძლიერი მხარეები"
+
+#. module: hr_recruitment_ai
+#. odoo-python
+#: code:addons/hr_recruitment_ai/models/ai_engine.py:0
+#: code:addons/hr_recruitment_ai/models/hr_applicant_report.py:0
+msgid "Summary"
+msgstr "შეჯამება"
+
+#. module: hr_recruitment_ai
+#: model_terms:ir.ui.view,arch_db:hr_recruitment_ai.hr_applicant_view_form_ai
+msgid "Technical details (analysis log and extracted CV text)"
+msgstr "ტექნიკური დეტალები (ანალიზის ჟურნალი და CV-იდან ამოღებული ტექსტი)"
+
+#. module: hr_recruitment_ai
+#: model_terms:ir.ui.view,arch_db:hr_recruitment_ai.res_config_settings_view_form_ai
+msgid "Test connection"
+msgstr "კავშირის შემოწმება"
+
+#. module: hr_recruitment_ai
+#. odoo-python
+#: code:addons/hr_recruitment_ai/models/hr_applicant_report.py:0
+msgid ""
+"The AI claimed this, but could not point to it in the CV, so it does not "
+"count."
+msgstr "AI-ის მტკიცება CV-ის ტექსტში არ მოიძებნა, ამიტომ ქულაში არ შედის."
+
+#. module: hr_recruitment_ai
+#. odoo-python
+#: code:addons/hr_recruitment_ai/models/hr_recruitment_ai_center.py:0
+msgid ""
+"The AI engine (Ollama) is not reachable: only keywords will be checked."
+msgstr "AI (Ollama) მიუწვდომელია: შემოწმება - მხოლოდ საკვანძო სიტყვებით."
+
+#. module: hr_recruitment_ai
+#. odoo-python
+#: code:addons/hr_recruitment_ai/models/hr_recruitment_ai_center.py:0
+msgid "The AI model is switched off in the settings: keywords only."
+msgstr "AI მოდელი პარამეტრებში გამორთულია: მხოლოდ საკვანძო სიტყვები."
+
+#. module: hr_recruitment_ai
+#. odoo-python
+#: code:addons/hr_recruitment_ai/models/ai_engine.py:0
+msgid ""
+"The AI read %(ai)s years of experience, but the dates in the CV only cover "
+"%(dates)s: the lower number is used."
+msgstr ""
+"AI-ის წაკითხვა: %(ai)s წლის გამოცდილება; CV-ის თარიღები - მხოლოდ %(dates)s "
+"წელი. გამოყენებულია მცირე რიცხვი."
+
+#. module: hr_recruitment_ai
+#: model_terms:ir.ui.view,arch_db:hr_recruitment_ai.hr_job_simple_form_ai
+msgid ""
+"The AI reads every incoming CV against this. You can refine it later on the "
+"job's AI tab."
+msgstr ""
+"ყოველი შემოსული CV-ის შეფასება ხდება ამ კრიტერიუმებით. შეცვლა შესაძლებელია "
+"მოგვიანებით, ვაკანსიის AI გვერდზე."
+
+#. module: hr_recruitment_ai
+#. odoo-python
+#: code:addons/hr_recruitment_ai/models/hr_applicant.py:0
+msgid "The AI text of the previous analysis was kept."
+msgstr "შენარჩუნებულია წინა ანალიზის AI ტექსტი."
+
+#. module: hr_recruitment_ai
+#. odoo-python
+#: code:addons/hr_recruitment_ai/models/hr_applicant.py:0
+msgid "The analysis failed: %s"
+msgstr "ანალიზი შეცდომით დასრულდა: %s"
+
+#. module: hr_recruitment_ai
+#. odoo-python
+#: code:addons/hr_recruitment_ai/models/hr_applicant.py:0
+msgid ""
+"The analysis is still running in the background (a slow computer or a big "
+"model needs a few minutes). Refresh this page in a moment to see the result."
+msgstr ""
+"ანალიზი ფონურ რეჟიმში ხდება (კომპიუტერის სიჩქარის ან მოდელის ზომის "
+"საფუძველზე - რამდენიმე წუთი). შედეგისათვის - გვერდის განახლება."
+
+#. module: hr_recruitment_ai
+#: model_terms:ir.ui.view,arch_db:hr_recruitment_ai.hr_recruitment_ai_center_view_form
+msgid ""
+"The analysis runs in the background, one CV after another, so you can keep "
+"working. Press Refresh to see the progress."
+msgstr ""
+"ანალიზი ფონურ რეჟიმში ხდება, CV-ები - ერთმანეთის მიყოლებით; მუშაობა "
+"შესაძლებელია პარალელურად. პროგრესისათვის - ღილაკი „განახლება“."
+
+#. module: hr_recruitment_ai
+#. odoo-python
+#: code:addons/hr_recruitment_ai/models/hr_applicant.py:0
+msgid "The full AI report is on the applicant's AI tab."
+msgstr "AI-ის სრული ანგარიში - კანდიდატის AI გვერდზე."
+
+#. module: hr_recruitment_ai
+#: model:ir.model.fields,help:hr_recruitment_ai.field_hr_applicant__ai_llm_score
+msgid ""
+"The language model's rough overall guess. Information only: it is not part "
+"of the match %, which is calculated from the job's requirements. It is only "
+"used as the score when the job has no requirements at all."
+msgstr ""
+"LLM მოდელის ზოგადი, დაახლოებითი შეფასება. მხოლოდ ინფორმაციისათვის: "
+"შესაბამისობის პროცენტში არ შედის; პროცენტი - ვაკანსიის მოთხოვნების "
+"საფუძველზე. ქულის სახით გამოყენებულია მხოლოდ მოთხოვნების გარეშე ვაკანსიებზე."
+
+#. module: hr_recruitment_ai
+#. odoo-python
+#: code:addons/hr_recruitment_ai/models/hr_applicant.py:0
+#: code:addons/hr_recruitment_ai/models/hr_applicant_report.py:0
+msgid "The last analysis failed"
+msgstr "ბოლო ანალიზი შეცდომით დასრულდა"
+
+#. module: hr_recruitment_ai
+#. odoo-python
+#: code:addons/hr_recruitment_ai/models/hr_job.py:0
+msgid "The match threshold must be between 0 and 100."
+msgstr "შესაბამისობის ზღვარი 0-დან 100-მდე უნდა იყოს."
+
+#. module: hr_recruitment_ai
+#. odoo-python
+#: code:addons/hr_recruitment_ai/models/ai_engine.py:0
+msgid ""
+"The model's own rough estimate was %s%%. Information only: the match %% is "
+"calculated from the requirements."
+msgstr ""
+"მოდელის ზოგადი შეფასება: %s%%. მხოლოდ ინფორმაციისათვის: შესაბამისობის %% - "
+"მოთხოვნების საფუძველზე."
+
+#. module: hr_recruitment_ai
+#. odoo-python
+#: code:addons/hr_recruitment_ai/models/hr_applicant_report.py:0
+msgid "The reason is in the technical details at the bottom of this tab."
+msgstr "მიზეზი მითითებულია ტექნიკური დეტალებში, გვერდის ბოლოში."
+
+#. module: hr_recruitment_ai
+#. odoo-python
+#: code:addons/hr_recruitment_ai/models/hr_applicant_report.py:0
+msgid "The result appears here within two minutes."
+msgstr "შედეგი აქ გამოჩნდება ორ წუთის განმავლობაში."
+
+#. module: hr_recruitment_ai
+#: model:ir.model.fields,help:hr_recruitment_ai.field_hr_recruitment_ai_center__job_id
+msgid ""
+"The uploaded CVs are scored against this job's criteria. Leave empty for "
+"spontaneous applications."
+msgstr ""
+"ჩატვირთული CV-ების შეფასება - ამ ვაკანსიის კრიტერიუმებით. ცარიელი - "
+"ვაკანსიის გარეშე განაცხადებისათვის."
+
+#. module: hr_recruitment_ai
+#: model:ir.model.fields,help:hr_recruitment_ai.field_hr_applicant_requirement_result__ai_quote
+msgid "The words of the CV the AI pointed at; verified to be in the CV."
+msgstr ""
+"CV-ის ტექსტის ფრაგმენტი, AI-ის მიერ მითითებული. CV-ში მოძებნა - შემოწმებული."
+
+#. module: hr_recruitment_ai
+#. odoo-python
+#: code:addons/hr_recruitment_ai/models/hr_recruitment_ai_center.py:0
+msgid "There are no CVs yet."
+msgstr "CV-ები არ არის."
+
+#. module: hr_recruitment_ai
+#. odoo-python
+#: code:addons/hr_recruitment_ai/models/hr_recruitment_ai_center.py:0
+msgid "These files are not CVs the AI can read (use PDF, DOCX or TXT): %s"
+msgstr ""
+"ამ ფაილების წაკითხვა AI-ისათვის შეუძლებელია (საჭიროა PDF, DOCX ან TXT): %s"
+
+#. module: hr_recruitment_ai
+#. odoo-python
+#: code:addons/hr_recruitment_ai/models/hr_applicant_report.py:0
+msgid ""
+"This CV is queued. The analysis starts automatically within two minutes."
+msgstr ""
+"CV რიგში დაყენებულია. ანალიზი ავტომატურად დაიწყება ორ წუთის განმავლობაში."
+
+#. module: hr_recruitment_ai
+#. odoo-python
+#: code:addons/hr_recruitment_ai/models/hr_applicant.py:0
+msgid ""
+"This CV is still being analysed in the background. Refresh the page in a "
+"moment to see the result."
+msgstr ""
+"CV-ის ანალიზი ფონურ რეჟიმში ხდება. შედეგისათვის - გვერდის განახლება "
+"რამდენიმე წამში."
+
+#. module: hr_recruitment_ai
+#. odoo-python
+#: code:addons/hr_recruitment_ai/models/hr_applicant.py:0
+msgid "This applicant has no email address yet."
+msgstr "ამ კანდიდატის ელ. ფოსტა მითითებული არ არის."
+
+#. module: hr_recruitment_ai
+#. odoo-python
+#: code:addons/hr_recruitment_ai/models/hr_applicant_report.py:0
+msgid "Threshold"
+msgstr "ზღვარი"
+
+#. module: hr_recruitment_ai
+#: model:ir.model.fields,field_description:hr_recruitment_ai.field_hr_applicant__ai_threshold
+msgid "Threshold used (%)"
+msgstr "გამოყენებული ზღვარი (%)"
+
+#. module: hr_recruitment_ai
+#: model:ir.model.fields,field_description:hr_recruitment_ai.field_hr_recruitment_ai_center__todo_count
+msgid "Todo Count"
+msgstr "ანალიზის გარეშე CV-ების რაოდენობა"
+
+#. module: hr_recruitment_ai
+#. odoo-python
+#: code:addons/hr_recruitment_ai/models/ai_engine.py:0
+msgid "Total relevant professional experience of %s years or more."
+msgstr "სფეროში პროფესიული გამოცდილება: %s წელი ან მეტი."
+
+#. module: hr_recruitment_ai
+#: model:ir.model.fields,field_description:hr_recruitment_ai.field_hr_applicant__ai_cv_upload
+msgid "Upload a CV"
+msgstr "CV-ის ჩატვირთვა"
+
+#. module: hr_recruitment_ai
+#: model_terms:ir.ui.view,arch_db:hr_recruitment_ai.hr_recruitment_ai_center_view_form
+msgid "Upload and analyse"
+msgstr "ჩატვირთვა და ანალიზი"
+
+#. module: hr_recruitment_ai
+#: model:ir.model.fields,field_description:hr_recruitment_ai.field_res_config_settings__hr_recruitment_ai_use_llm
+msgid "Use local LLM (Ollama chat model)"
+msgstr "ლოკალური LLM-ის გამოყენება (Ollama)"
+
+#. module: hr_recruitment_ai
+#: model:ir.model.fields,field_description:hr_recruitment_ai.field_res_config_settings__hr_recruitment_ai_use_embeddings
+msgid "Use semantic matching (embeddings)"
+msgstr "სემანტიკური შედარების გამოყენება (embeddings)"
+
+#. module: hr_recruitment_ai
+#. odoo-python
+#: code:addons/hr_recruitment_ai/models/hr_applicant.py:0
+msgid "Used Odoo's indexed text instead."
+msgstr "გამოყენებულია Odoo-ს ინდექსირებული ტექსტი."
+
+#. module: hr_recruitment_ai
+#: model:ir.model.fields,help:hr_recruitment_ai.field_res_config_settings__hr_recruitment_ai_default_threshold
+msgid "Used by jobs that do not set their own threshold."
+msgstr "გამოყენებულია ვაკანსიებზე, რომლებზე ზღვარი მითითებული არ არის."
+
+#. module: hr_recruitment_ai
+#: model_terms:ir.ui.view,arch_db:hr_recruitment_ai.view_hr_job_kanban_ai
+msgid "Vacant positions"
+msgstr "ვაკანტური ადგილები"
+
+#. module: hr_recruitment_ai
+#. odoo-python
+#: code:addons/hr_recruitment_ai/models/hr_applicant.py:0
+msgid "Verdict"
+msgstr "დასკვნა"
+
+#. module: hr_recruitment_ai
+#. odoo-python
+#: code:addons/hr_recruitment_ai/models/hr_applicant.py:0
+msgid "Warning"
+msgstr "გაფრთხილება"
+
+#. module: hr_recruitment_ai
+#: model:ir.model.fields,field_description:hr_recruitment_ai.field_hr_applicant_requirement_result__weight
+#: model:ir.model.fields,field_description:hr_recruitment_ai.field_hr_job_requirement__weight
+msgid "Weight"
+msgstr "წონა"
+
+#. module: hr_recruitment_ai
+#. odoo-python
+#: code:addons/hr_recruitment_ai/models/hr_applicant_report.py:0
+msgid "Weight %s"
+msgstr "წონა %s"
+
+#. module: hr_recruitment_ai
+#: model:ir.model.fields,help:hr_recruitment_ai.field_hr_job_requirement__name
+msgid "What the candidate must show, e.g. 'Python backend development'."
+msgstr "მოთხოვნის დასახელება, მაგ. 'Python backend development'."
+
+#. module: hr_recruitment_ai
+#: model:ir.model.fields,help:hr_recruitment_ai.field_hr_job__ai_auto_fill
+msgid ""
+"When a CV matches: add the 'AI Match' tag, raise priority, schedule a "
+"'Contact candidate' activity and optionally move the stage."
+msgstr ""
+"შესაბამისი CV-ის შემთხვევაში: ეტიკეტი „AI Match“, პრიორიტეტის ამაღლება, "
+"დავალება „კანდიდატთან დაკავშირება“ და, არჩევის შემთხვევაში, ეტაპის შეცვლა."
+
+#. module: hr_recruitment_ai
+#: model:ir.model.fields,help:hr_recruitment_ai.field_hr_applicant_requirement_result__sources
+msgid "Which layers produced the score: keyword, embedding, llm."
+msgstr ""
+"ქულის წყარო: საკვანძო სიტყვები (keyword), სემანტიკა (embedding), LLM (llm)."
+
+#. module: hr_recruitment_ai
+#: model_terms:ir.ui.view,arch_db:hr_recruitment_ai.view_hr_job_form_ai
+msgid "Write it the way you would explain the job to a colleague."
+msgstr "აღწერა სადა, ყოველდღიური ენით."
+
+#. module: hr_recruitment_ai
+#: model_terms:ir.ui.view,arch_db:hr_recruitment_ai.view_hr_job_form_ai
+msgid "You get a shortlist"
+msgstr "შერჩეული კანდიდატების სია"
+
+#. module: hr_recruitment_ai
+#. odoo-python
+#: code:addons/hr_recruitment_ai/models/hr_applicant.py:0
+msgid "Your application - %s"
+msgstr "თქვენი განაცხადი - %s"
+
+#. module: hr_recruitment_ai
+#. odoo-python
+#: code:addons/hr_recruitment_ai/models/hr_applicant.py:0
+msgid "a must-have requirement is missing"
+msgstr "აკლია აუცილებელი მოთხოვნა"
+
+#. module: hr_recruitment_ai
+#. odoo-python
+#: code:addons/hr_recruitment_ai/models/hr_recruitment_ai_center.py:0
+msgid "ai_state"
+msgstr "ai_state"
+
+#. module: hr_recruitment_ai
+#. odoo-python
+#: code:addons/hr_recruitment_ai/models/hr_recruitment_ai_center.py:0
+msgid "ai_verdict"
+msgstr "ai_verdict"
+
+#. module: hr_recruitment_ai
+#: model_terms:ir.ui.view,arch_db:hr_recruitment_ai.hr_job_simple_form_ai
+#: model_terms:ir.ui.view,arch_db:hr_recruitment_ai.view_hr_job_form_ai
+msgid "e.g. 1c, odoo, ბუღალტერია"
+msgstr "მაგ. 1c, odoo, ბუღალტერია"
+
+#. module: hr_recruitment_ai
+#: model_terms:ir.ui.view,arch_db:hr_recruitment_ai.hr_job_simple_form_ai
+#: model_terms:ir.ui.view,arch_db:hr_recruitment_ai.view_hr_job_form_ai
+msgid "e.g. Accounting software"
+msgstr "მაგ. საბუღალტრო პროგრამები"
+
+#. module: hr_recruitment_ai
+#. odoo-python
+#: code:addons/hr_recruitment_ai/models/hr_applicant.py:0
+msgid "email"
+msgstr "ელ. ფოსტა"
+
+#. module: hr_recruitment_ai
+#. odoo-python
+#: code:addons/hr_recruitment_ai/models/hr_applicant_report.py:0
+msgid "error"
+msgstr "შეცდომა"
+
+#. module: hr_recruitment_ai
+#. odoo-python
+#: code:addons/hr_recruitment_ai/models/ai_engine.py:0
+msgid "keywords"
+msgstr "საკვანძო სიტყვები"
+
+#. module: hr_recruitment_ai
+#. odoo-python
+#: code:addons/hr_recruitment_ai/models/hr_applicant.py:0
+msgid "keywords only (Ollama not used)"
+msgstr "მხოლოდ საკვანძო სიტყვები (Ollama გამოყენებული არ არის)"
+
+#. module: hr_recruitment_ai
+#. odoo-python
+#: code:addons/hr_recruitment_ai/models/hr_applicant_report.py:0
+msgid "match"
+msgstr "შესაბამისობა"
+
+#. module: hr_recruitment_ai
+#. odoo-python
+#: code:addons/hr_recruitment_ai/models/ai_engine.py:0
+msgid "met"
+msgstr "დაკმაყოფილებული"
+
+#. module: hr_recruitment_ai
+#. odoo-python
+#: code:addons/hr_recruitment_ai/models/hr_applicant_report.py:0
+msgid "must-have missing"
+msgstr "აკლია აუცილებელი"
+
+#. module: hr_recruitment_ai
+#. odoo-python
+#: code:addons/hr_recruitment_ai/models/hr_applicant.py:0
+msgid "name"
+msgstr "სახელი"
+
+#. module: hr_recruitment_ai
+#. odoo-python
+#: code:addons/hr_recruitment_ai/models/ai_engine.py:0
+msgid "none found"
+msgstr "არ მოიძებნა"
+
+#. module: hr_recruitment_ai
+#. odoo-python
+#: code:addons/hr_recruitment_ai/models/ai_engine.py:0
+msgid "not met"
+msgstr "დაკმაყოფილებული არ არის"
+
+#. module: hr_recruitment_ai
+#. odoo-python
+#: code:addons/hr_recruitment_ai/models/hr_applicant.py:0
+msgid "not scored"
+msgstr "ქულა არ მიენიჭა"
+
+#. module: hr_recruitment_ai
+#. odoo-python
+#: code:addons/hr_recruitment_ai/models/hr_applicant.py:0
+msgid "nothing"
+msgstr "არაფერი"
+
+#. module: hr_recruitment_ai
+#. odoo-python
+#: code:addons/hr_recruitment_ai/models/hr_applicant.py:0
+msgid "nothing (fields were already set)"
+msgstr "არაფერი (ველები შევსებული იყო)"
+
+#. module: hr_recruitment_ai
+#. odoo-python
+#: code:addons/hr_recruitment_ai/models/hr_recruitment_ai_center.py:0
+msgid "o_hrai_tile--amber"
+msgstr "o_hrai_tile--amber"
+
+#. module: hr_recruitment_ai
+#. odoo-python
+#: code:addons/hr_recruitment_ai/models/hr_recruitment_ai_center.py:0
+msgid "o_hrai_tile--blue"
+msgstr "o_hrai_tile--blue"
+
+#. module: hr_recruitment_ai
+#. odoo-python
+#: code:addons/hr_recruitment_ai/models/hr_recruitment_ai_center.py:0
+msgid "o_hrai_tile--green"
+msgstr "o_hrai_tile--green"
+
+#. module: hr_recruitment_ai
+#. odoo-python
+#: code:addons/hr_recruitment_ai/models/hr_recruitment_ai_center.py:0
+msgid "o_hrai_tile--red"
+msgstr "o_hrai_tile--red"
+
+#. module: hr_recruitment_ai
+#. odoo-python
+#: code:addons/hr_recruitment_ai/models/ai_engine.py:0
+msgid "partially met"
+msgstr "ნაწილობრივ დაკმაყოფილებული"
+
+#. module: hr_recruitment_ai
+#. odoo-python
+#: code:addons/hr_recruitment_ai/models/hr_applicant_report.py:0
+msgid "pending"
+msgstr "რიგში"
+
+#. module: hr_recruitment_ai
+#. odoo-python
+#: code:addons/hr_recruitment_ai/models/hr_applicant.py:0
+msgid "phone"
+msgstr "ტელეფონი"
+
+#. module: hr_recruitment_ai
+#. odoo-python
+#: code:addons/hr_recruitment_ai/models/ai_engine.py:0
+msgid "semantic match"
+msgstr "სემანტიკური შესაბამისობა"
+
+#. module: hr_recruitment_ai
+#. odoo-python
+#: code:addons/hr_recruitment_ai/models/hr_applicant_report.py:0
+msgid "threshold %s%%"
+msgstr "ზღვარი %s%%"
+
+#. module: hr_recruitment_ai
+#: model:ir.model.fields,help:hr_recruitment_ai.field_hr_applicant_requirement_result__ai_policy
+msgid ""
+"unverified: the AI's claim was not found in the CV and does not count. "
+"keywords_missing: none of the requirement's keywords is in the CV, so the AI"
+" could give half credit at most."
+msgstr ""
+"unverified: AI-ის მტკიცება CV-ში არ მოიძებნა და ქულაში არ შედის. "
+"keywords_missing: მოთხოვნის საკვანძო სიტყვები CV-ში არ მოიძებნა, ამიტომ AI -"
+" მაქსიმუმ ნახევარი ქულა."

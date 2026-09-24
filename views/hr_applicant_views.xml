@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Form: header buttons + "AI Screening" tab -->
+    <record id="hr_applicant_view_form_ai" model="ir.ui.view">
+        <field name="name">hr.applicant.form.ai.screening</field>
+        <field name="model">hr.applicant</field>
+        <field name="inherit_id" ref="hr_recruitment.hr_applicant_view_form"/>
+        <field name="arch" type="xml">
+            <!-- AI result at a glance, right under the applicant's name. The two AI buttons live
+                 here instead of the header, which the long stage bar already fills. -->
+            <xpath expr="//div[hasclass('oe_title')]" position="after">
+                <div class="o_hrai_banner_wrap">
+                    <field name="ai_banner_html" nolabel="1" readonly="1" class="o_hrai_banner_field"/>
+                    <div class="o_hrai_banner_actions">
+                        <button string="Contact candidate" name="action_ai_open_contact_email" type="object"
+                                class="btn btn-primary" icon="fa-envelope-o"
+                                invisible="not ai_email_body or not email_from"/>
+                        <button string="Analyze CV (AI)" name="action_ai_analyze" type="object"
+                                class="btn btn-secondary" icon="fa-magic" data-hotkey="a"/>
+                        <!-- Hand upload: the file becomes an attachment and is analysed in the background -->
+                        <div class="o_hrai_upload">
+                            <span class="o_hrai_upload_label"><i class="fa fa-cloud-upload" role="img" aria-label="Upload"/> <span>Upload a CV</span></span>
+                            <field name="ai_cv_upload" filename="ai_cv_upload_name" nolabel="1"/>
+                            <field name="ai_cv_upload_name" invisible="1"/>
+                        </div>
+                    </div>
+                </div>
+            </xpath>
+            <xpath expr="//page[@name='application_note']" position="after">
+                <page string="AI Screening" name="ai_screening">
+                    <field name="ai_state" invisible="1"/>
+                    <field name="ai_cv_text" invisible="1"/>
+
+                    <!-- Score, summary, strengths / gaps and the requirement checklist:
+                         rendered by hr_applicant_report.py with the module stylesheet. -->
+                    <field name="ai_report_html" nolabel="1" readonly="1" class="o_hrai_report_field"/>
+
+                    <div class="o_hrai_report">
+                        <!-- Invitation e-mail -->
+                        <div class="o_hrai_card" invisible="ai_state != 'done'">
+                            <div class="o_hrai_card_title">
+                                <i class="fa fa-envelope-o" role="img" aria-label="E-mail"/>
+                                <span>Invitation e-mail</span>
+                                <button name="action_ai_open_contact_email" type="object"
+                                        string="Contact candidate" icon="fa-paper-plane"
+                                        class="btn btn-primary btn-sm ms-auto"
+                                        invisible="not ai_email_body or not email_from"/>
+                            </div>
+                            <p class="o_hrai_hint">A ready-to-send invitation. Edit it freely, then send it with one click.</p>
+                            <label for="ai_email_subject" class="fw-bold"/>
+                            <field name="ai_email_subject" class="w-100 mb-3"/>
+                            <label for="ai_email_body" class="fw-bold"/>
+                            <field name="ai_email_body" class="w-100"/>
+                        </div>
+
+                        <!-- Technical details, collapsed -->
+                        <details class="o_hrai_details" invisible="ai_state == 'none'">
+                            <summary>Technical details (analysis log and extracted CV text)</summary>
+                            <div class="o_hrai_card mt-2">
+                                <div class="o_hrai_card_title">
+                                    <i class="fa fa-terminal" role="img" aria-label="Log"/>
+                                    <span>Engine log</span>
+                                </div>
+                                <field name="ai_engine_log" nolabel="1" readonly="1"/>
+                            </div>
+                            <div class="o_hrai_card" invisible="not ai_cv_text">
+                                <div class="o_hrai_card_title">
+                                    <i class="fa fa-file-text-o" role="img" aria-label="CV"/>
+                                    <span>Extracted CV text</span>
+                                </div>
+                                <field name="ai_cv_text" nolabel="1" readonly="1"/>
+                            </div>
+                        </details>
+                    </div>
+                </page>
+            </xpath>
+        </field>
+    </record>
+
+    <!-- List: score + verdict columns -->
+    <record id="crm_case_tree_view_job_ai" model="ir.ui.view">
+        <field name="name">hr.applicant.list.ai.screening</field>
+        <field name="model">hr.applicant</field>
+        <field name="inherit_id" ref="hr_recruitment.crm_case_tree_view_job"/>
+        <field name="arch" type="xml">
+            <field name="priority" position="after">
+                <field name="ai_score" string="AI %" optional="show" widget="progressbar"/>
+                <field name="ai_verdict" optional="show" widget="badge"
+                       decoration-success="ai_verdict == 'match'"
+                       decoration-warning="ai_verdict == 'partial'"
+                       decoration-danger="ai_verdict == 'no_match'"/>
+            </field>
+        </field>
+    </record>
+
+    <!-- Kanban: score pill on the card -->
+    <record id="hr_kanban_view_applicant_ai" model="ir.ui.view">
+        <field name="name">hr.applicant.kanban.ai.screening</field>
+        <field name="model">hr.applicant</field>
+        <field name="inherit_id" ref="hr_recruitment.hr_kanban_view_applicant"/>
+        <field name="arch" type="xml">
+            <xpath expr="//kanban/field[@name='application_status']" position="after">
+                <field name="ai_score"/>
+                <field name="ai_verdict"/>
+            </xpath>
+            <xpath expr="//t[@t-name='card']//field[@name='categ_ids']" position="after">
+                <div t-if="record.ai_verdict.raw_value" class="mt-1">
+                    <span t-attf-class="o_hrai_pill o_hrai_pill--sm o_hrai_pill--#{record.ai_verdict.raw_value == 'no_match' ? 'nomatch' : record.ai_verdict.raw_value}"
+                          t-att-title="record.ai_verdict.value">
+                        <i class="fa fa-magic" role="img" aria-label="AI"/>
+                        <t t-esc="record.ai_score.raw_value"/>%
+                    </span>
+                </div>
+            </xpath>
+        </field>
+    </record>
+
+    <!-- Search: filters + group by -->
+    <record id="hr_applicant_view_search_bis_ai" model="ir.ui.view">
+        <field name="name">hr.applicant.search.ai.screening</field>
+        <field name="model">hr.applicant</field>
+        <field name="inherit_id" ref="hr_recruitment.hr_applicant_view_search_bis"/>
+        <field name="arch" type="xml">
+            <filter name="applicant_availability" position="after">
+                <separator/>
+                <filter string="AI: Match" name="ai_match" domain="[('ai_verdict', '=', 'match')]"/>
+                <filter string="AI: Partial match" name="ai_partial" domain="[('ai_verdict', '=', 'partial')]"/>
+                <filter string="AI: No match" name="ai_no_match" domain="[('ai_verdict', '=', 'no_match')]"/>
+                <filter string="AI: Not analyzed" name="ai_not_analyzed"
+                        domain="[('ai_state', 'in', ('none', 'pending', 'error'))]"/>
+                <filter string="AI Verdict" name="group_ai_verdict" context="{'group_by': 'ai_verdict'}"/>
+            </filter>
+        </field>
+    </record>
+</odoo>

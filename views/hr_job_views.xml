@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Full job form: "AI Screening" tab + stat button -->
+    <record id="view_hr_job_form_ai" model="ir.ui.view">
+        <field name="name">hr.job.form.ai.screening</field>
+        <field name="model">hr.job</field>
+        <field name="inherit_id" ref="hr.view_hr_job_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//page[@name='job_description_page']" position="after">
+                <page string="AI Screening" name="ai_screening_page"
+                      groups="hr_recruitment.group_hr_recruitment_interviewer,hr.group_hr_user">
+                    <div class="o_hrai_report">
+                        <!-- How it works -->
+                        <div class="o_hrai_steps">
+                            <div class="o_hrai_step">
+                                <span class="o_hrai_step_num">1</span>
+                                <div>
+                                    <div class="o_hrai_step_title">Say what you need</div>
+                                    <div class="o_hrai_step_text">List the skills, the experience and the must-haves below.</div>
+                                </div>
+                            </div>
+                            <div class="o_hrai_step">
+                                <span class="o_hrai_step_num">2</span>
+                                <div>
+                                    <div class="o_hrai_step_title">CVs arrive</div>
+                                    <div class="o_hrai_step_text">By e-mail or upload. Every CV is read and scored automatically.</div>
+                                </div>
+                            </div>
+                            <div class="o_hrai_step">
+                                <span class="o_hrai_step_num">3</span>
+                                <div>
+                                    <div class="o_hrai_step_title">You get a shortlist</div>
+                                    <div class="o_hrai_step_text">Matches are flagged, contacts are filled in and an invitation is drafted.</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="o_hrai_grid">
+                            <!-- Rules -->
+                            <div class="o_hrai_card">
+                                <div class="o_hrai_card_title">
+                                    <i class="fa fa-sliders" role="img" aria-label="Rules"/>
+                                    <span>Matching rules</span>
+                                </div>
+                                <group>
+                                    <label for="ai_match_threshold"/>
+                                    <div class="o_row">
+                                        <field name="ai_match_threshold" class="oe_inline"/><span>%</span>
+                                    </div>
+                                    <label for="ai_min_experience_years"/>
+                                    <div class="o_row">
+                                        <field name="ai_min_experience_years" class="oe_inline"/><span>years</span>
+                                    </div>
+                                    <field name="ai_auto_fill" widget="boolean_toggle"/>
+                                    <field name="ai_match_stage_id" options="{'no_create': True}"
+                                           invisible="not ai_auto_fill"/>
+                                </group>
+                            </div>
+                            <!-- Free text -->
+                            <div class="o_hrai_card">
+                                <div class="o_hrai_card_title">
+                                    <i class="fa fa-commenting-o" role="img" aria-label="Notes"/>
+                                    <span>Free-text requirements for the AI</span>
+                                </div>
+                                <p class="o_hrai_hint">Write it the way you would explain the job to a colleague.</p>
+                                <field name="requirements" nolabel="1"
+                                       placeholder="Anything else the AI should consider: education, languages, certificates, soft skills, schedule, location..."/>
+                            </div>
+                        </div>
+
+                        <!-- Requirements -->
+                        <div class="o_hrai_card">
+                            <div class="o_hrai_card_title">
+                                <i class="fa fa-list-ul" role="img" aria-label="Requirements"/>
+                                <span>Skills and requirements (each one is scored)</span>
+                                <button name="action_ai_reevaluate_applicants" type="object"
+                                        string="Re-evaluate all applicants" icon="fa-refresh"
+                                        class="btn btn-secondary btn-sm ms-auto"
+                                        help="Queue every applicant of this job that has a CV file for a fresh AI screening."/>
+                            </div>
+                            <p class="o_hrai_hint">Keywords are words that prove a skill when found in the CV (comma-separated,
+                                Georgian or English). Weight 1-10 sets its importance; "Must have" blocks a
+                                full match when missing.</p>
+                            <field name="ai_requirement_ids" context="{'default_job_id': id}">
+                                <list editable="bottom">
+                                    <field name="sequence" widget="handle"/>
+                                    <field name="name" placeholder="e.g. Accounting software"/>
+                                    <field name="keywords" placeholder="e.g. 1c, odoo, ბუღალტერია"/>
+                                    <field name="weight"/>
+                                    <field name="mandatory" widget="boolean_toggle"/>
+                                    <field name="description" optional="hide"/>
+                                </list>
+                            </field>
+                        </div>
+                    </div>
+                </page>
+            </xpath>
+            <div name="button_box" position="inside">
+                <button class="oe_stat_button" icon="fa-magic" type="object"
+                        name="action_ai_open_matches"
+                        groups="hr_recruitment.group_hr_recruitment_interviewer"
+                        invisible="not ai_matched_applicant_count">
+                    <field name="ai_matched_applicant_count" widget="statinfo" string="AI Matches"/>
+                </button>
+            </div>
+        </field>
+    </record>
+
+    <!-- Job Positions dashboard: cards in the module's visual language instead of plain rows -->
+    <record id="view_hr_job_kanban_ai" model="ir.ui.view">
+        <field name="name">hr.job.kanban.ai.dashboard</field>
+        <field name="model">hr.job</field>
+        <field name="inherit_id" ref="hr_recruitment.view_hr_job_kanban"/>
+        <field name="arch" type="xml">
+            <xpath expr="//kanban" position="attributes">
+                <attribute name="class" add="o_hrai_jobs" separator=" "/>
+            </xpath>
+            <xpath expr="//kanban/field[@name='alias_email']" position="after">
+                <field name="ai_requirement_count"/>
+                <field name="ai_matched_applicant_count"/>
+                <field name="ai_analysed_count"/>
+                <field name="ai_pending_count"/>
+                <field name="ai_avg_score"/>
+                <field name="ai_match_threshold"/>
+            </xpath>
+            <xpath expr="//div[hasclass('o_hr_recruitment_kanban_card_large_screen')]/main" position="replace">
+                <main class="o_hrai_job">
+                    <div class="o_hrai_job_head">
+                        <div class="o_hrai_job_title">
+                            <field name="is_favorite" widget="boolean_favorite" nolabel="1"/>
+                            <field name="name"/>
+                        </div>
+                        <div class="o_hrai_job_meta"
+                             groups="hr_recruitment.group_hr_recruitment_interviewer,hr.group_hr_user">
+                            <field name="user_id" widget="many2one_avatar_user"
+                                   options="{'display_avatar_name': True}"/>
+                            <span t-if="record.alias_email.value" class="o_hrai_job_alias">
+                                <i class="fa fa-envelope-o" role="img" aria-label="E-mail"/>
+                                <field name="alias_id" groups="hr_recruitment.group_hr_recruitment_interviewer"/>
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="o_hrai_tiles">
+                        <div class="o_hrai_tile" title="Vacant positions">
+                            <span class="o_hrai_tile_num"><field name="no_of_recruitment"/></span>
+                            <span class="o_hrai_tile_label">Vacant</span>
+                        </div>
+                        <div class="o_hrai_tile o_hrai_tile--blue" title="New applications"
+                             groups="hr_recruitment.group_hr_recruitment_interviewer">
+                            <span class="o_hrai_tile_num"><field name="new_application_count"/></span>
+                            <span class="o_hrai_tile_label">New</span>
+                        </div>
+                        <div class="o_hrai_tile" groups="hr_recruitment.group_hr_recruitment_interviewer">
+                            <span class="o_hrai_tile_num"><field name="open_application_count"/></span>
+                            <span class="o_hrai_tile_label">In progress</span>
+                        </div>
+                        <a class="o_hrai_tile o_hrai_tile--green" name="action_ai_open_matches" type="object"
+                           title="AI matches" groups="hr_recruitment.group_hr_recruitment_interviewer">
+                            <span class="o_hrai_tile_num"><field name="ai_matched_applicant_count"/></span>
+                            <span class="o_hrai_tile_label"><i class="fa fa-magic" role="img" aria-label="AI"/> <span>Shortlisted</span></span>
+                        </a>
+                    </div>
+
+                    <div class="o_hrai_job_ai" groups="hr_recruitment.group_hr_recruitment_interviewer">
+                        <t t-if="record.ai_requirement_count.raw_value">
+                            <span class="o_hrai_pill o_hrai_pill--sm o_hrai_pill--ai">
+                                <i class="fa fa-magic" role="img" aria-label="AI"/>
+                                <span>AI criteria:</span> <field name="ai_requirement_count"/>
+                                <span class="o_hrai_dot"/> <span>threshold</span> <field name="ai_match_threshold"/>%
+                            </span>
+                            <span t-if="record.ai_analysed_count.raw_value" class="o_hrai_job_note">
+                                <span>CVs analysed:</span> <b><field name="ai_analysed_count"/></b>
+                                <span class="o_hrai_dot"/> <span>average</span> <b><field name="ai_avg_score"/>%</b>
+                            </span>
+                            <span t-if="record.ai_pending_count.raw_value" class="o_hrai_job_note">
+                                <i class="fa fa-hourglass-half" role="img" aria-label="Queued"/>
+                                <span>in the queue:</span> <b><field name="ai_pending_count"/></b>
+                            </span>
+                        </t>
+                        <t t-else="">
+                            <span class="o_hrai_pill o_hrai_pill--sm o_hrai_pill--partial">
+                                <i class="fa fa-exclamation-circle" role="img" aria-label="Warning"/>
+                                <span>AI criteria are not set yet</span>
+                            </span>
+                        </t>
+                    </div>
+
+                    <div class="o_hrai_job_actions">
+                        <button name="action_open_activities" type="object" class="btn btn-light btn-sm o_hrai_job_clock"
+                                groups="hr_recruitment.group_hr_recruitment_interviewer">
+                            <i class="fa fa-clock-o" role="img" aria-label="Activities"/>
+                            <span>Activities</span>
+                            <span class="badge rounded-pill text-bg-danger ms-1"><field name="activity_count"/></span>
+                        </button>
+                        <div name="large_screen_job_page_div" class="ms-auto" invisible="1">
+                            <button class="btn btn-primary btn-sm" name="%(hr_recruitment.action_hr_job_applications)d" type="action">
+                                Job Page
+                            </button>
+                        </div>
+                        <button class="btn btn-secondary btn-sm ms-auto" type="open">
+                            <i class="fa fa-sliders" role="img" aria-label="Configure"/> <span>Configure</span>
+                        </button>
+                    </div>
+                </main>
+            </xpath>
+        </field>
+    </record>
+
+    <!-- Quick-create dialog ("Create a Job Position"): the AI criteria right away -->
+    <record id="hr_job_simple_form_ai" model="ir.ui.view">
+        <field name="name">hr.job.simple.form.ai.screening</field>
+        <field name="model">hr.job</field>
+        <field name="inherit_id" ref="hr_recruitment.hr_job_simple_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//group" position="after">
+                <div class="o_hrai_report mt-3">
+                    <div class="o_hrai_card">
+                        <div class="o_hrai_card_title">
+                            <i class="fa fa-magic" role="img" aria-label="AI"/>
+                            <span>What the AI should look for</span>
+                        </div>
+                        <p class="o_hrai_hint">The AI reads every incoming CV against this. You can refine it later on the job's AI tab.</p>
+                        <group>
+                            <field name="description" widget="html"
+                                   options="{'collaborative': false, 'resizable': false}"
+                                   placeholder="Describe the job: responsibilities, team, conditions..."/>
+                            <field name="requirements"
+                                   placeholder="Free-text requirements: education, languages, certificates, soft skills..."/>
+                            <label for="ai_min_experience_years"/>
+                            <div class="o_row">
+                                <field name="ai_min_experience_years" class="oe_inline"/><span>years</span>
+                            </div>
+                            <label for="ai_match_threshold"/>
+                            <div class="o_row">
+                                <field name="ai_match_threshold" class="oe_inline"/><span>%</span>
+                            </div>
+                        </group>
+                    </div>
+                    <div class="o_hrai_card">
+                        <div class="o_hrai_card_title">
+                            <i class="fa fa-list-ul" role="img" aria-label="Requirements"/>
+                            <span>Skills and requirements (each one is scored)</span>
+                        </div>
+                        <p class="o_hrai_hint">Keywords are words that prove a skill when found in the CV (comma-separated,
+                            Georgian or English). Weight 1-10 sets its importance; "Must have" blocks a
+                            full match when missing.</p>
+                        <field name="ai_requirement_ids" nolabel="1" context="{'default_job_id': id}">
+                            <list editable="bottom">
+                                <field name="sequence" widget="handle"/>
+                                <field name="name" placeholder="e.g. Accounting software"/>
+                                <field name="keywords" placeholder="e.g. 1c, odoo, ბუღალტერია"/>
+                                <field name="weight"/>
+                                <field name="mandatory" widget="boolean_toggle"/>
+                            </list>
+                        </field>
+                    </div>
+                </div>
+            </xpath>
+        </field>
+    </record>
+
+    <!-- The dialog needs more room for the requirement table. -->
+    <record id="hr_recruitment.create_job_simple" model="ir.actions.act_window">
+        <field name="context">{'dialog_size': 'large'}</field>
+    </record>
+</odoo>

@@ -1,0 +1,7 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_hr_job_requirement_interviewer,hr.job.requirement interviewer,model_hr_job_requirement,hr_recruitment.group_hr_recruitment_interviewer,1,0,0,0
+access_hr_job_requirement_user,hr.job.requirement user,model_hr_job_requirement,hr_recruitment.group_hr_recruitment_user,1,1,1,1
+access_hr_job_requirement_hr_user,hr.job.requirement hr user,model_hr_job_requirement,hr.group_hr_user,1,1,1,1
+access_hr_applicant_requirement_result_interviewer,hr.applicant.requirement.result interviewer,model_hr_applicant_requirement_result,hr_recruitment.group_hr_recruitment_interviewer,1,1,1,1
+access_hr_applicant_requirement_result_user,hr.applicant.requirement.result user,model_hr_applicant_requirement_result,hr_recruitment.group_hr_recruitment_user,1,1,1,1
+access_hr_recruitment_ai_center_user,hr.recruitment.ai.center user,model_hr_recruitment_ai_center,hr_recruitment.group_hr_recruitment_user,1,1,1,1

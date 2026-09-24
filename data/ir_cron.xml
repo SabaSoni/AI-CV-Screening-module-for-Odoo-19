@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo noupdate="1">
+    <record id="ir_cron_hr_recruitment_ai_process" model="ir.cron">
+        <field name="name">Recruitment AI: screen queued CVs</field>
+        <field name="model_id" ref="hr_recruitment.model_hr_applicant"/>
+        <field name="state">code</field>
+        <field name="code">model._cron_ai_process_pending(limit=5)</field>
+        <field name="user_id" ref="base.user_root"/>
+        <field name="interval_number">2</field>
+        <field name="interval_type">minutes</field>
+        <field name="active" eval="True"/>
+    </record>
+</odoo>

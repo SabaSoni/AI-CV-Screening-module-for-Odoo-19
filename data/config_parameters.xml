@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo noupdate="1">
+    <!-- Defaults for the local AI engine. Change them in
+         Recruitment > Configuration > Settings > AI CV Screening. -->
+    <record id="param_ollama_url" model="ir.config_parameter">
+        <field name="key">hr_recruitment_ai.ollama_url</field>
+        <field name="value">http://127.0.0.1:11434</field>
+    </record>
+    <record id="param_chat_model" model="ir.config_parameter">
+        <field name="key">hr_recruitment_ai.chat_model</field>
+        <field name="value">gemma3:4b</field>
+    </record>
+    <record id="param_embed_model" model="ir.config_parameter">
+        <field name="key">hr_recruitment_ai.embed_model</field>
+        <field name="value">bge-m3</field>
+    </record>
+    <record id="param_threshold" model="ir.config_parameter">
+        <field name="key">hr_recruitment_ai.threshold</field>
+        <field name="value">80</field>
+    </record>
+    <record id="param_language" model="ir.config_parameter">
+        <field name="key">hr_recruitment_ai.language</field>
+        <field name="value">ka</field>
+    </record>
+    <record id="param_use_llm" model="ir.config_parameter">
+        <field name="key">hr_recruitment_ai.use_llm</field>
+        <field name="value">1</field>
+    </record>
+    <record id="param_use_embeddings" model="ir.config_parameter">
+        <field name="key">hr_recruitment_ai.use_embeddings</field>
+        <field name="value">1</field>
+    </record>
+    <record id="param_auto_run" model="ir.config_parameter">
+        <field name="key">hr_recruitment_ai.auto_run</field>
+        <field name="value">1</field>
+    </record>
+    <record id="param_embed_on_cpu" model="ir.config_parameter">
+        <field name="key">hr_recruitment_ai.embed_on_cpu</field>
+        <field name="value">1</field>
+    </record>
+    <record id="param_proofread" model="ir.config_parameter">
+        <field name="key">hr_recruitment_ai.proofread</field>
+        <field name="value">0</field>
+    </record>
+</odoo>

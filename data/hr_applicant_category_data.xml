@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo noupdate="1">
+    <record id="applicant_category_ai_match" model="hr.applicant.category">
+        <field name="name">AI Match</field>
+        <field name="color">10</field>
+    </record>
+</odoo>

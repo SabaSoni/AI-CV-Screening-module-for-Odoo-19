@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="hr_recruitment_ai_center_view_form" model="ir.ui.view">
+        <field name="name">hr.recruitment.ai.center.form</field>
+        <field name="model">hr.recruitment.ai.center</field>
+        <field name="arch" type="xml">
+            <form string="AI CV analysis" create="false" delete="false" duplicate="false">
+                <sheet>
+                    <field name="pending_count" invisible="1"/>
+                    <field name="todo_count" invisible="1"/>
+
+                    <!-- Numbers, progress and the state of the AI engine -->
+                    <field name="stats_html" nolabel="1" readonly="1" class="o_hrai_report_field"/>
+
+                    <div class="o_hrai_report">
+                        <div class="o_hrai_grid">
+                            <!-- Analyse -->
+                            <div class="o_hrai_card">
+                                <div class="o_hrai_card_title">
+                                    <i class="fa fa-magic" role="img" aria-label="AI"/>
+                                    <span>Analyse the CVs</span>
+                                </div>
+                                <p class="o_hrai_hint">The analysis runs in the background, one CV after another, so you can keep working. Press Refresh to see the progress.</p>
+                                <div class="o_hrai_actions">
+                                    <button name="action_analyze_new" type="object" class="btn btn-primary"
+                                            icon="fa-play" string="Analyse new CVs"
+                                            help="CVs that were never analysed, and the ones that failed."/>
+                                    <button name="action_analyze_all" type="object" class="btn btn-secondary"
+                                            icon="fa-refresh" string="Re-analyse every CV"
+                                            confirm="Every CV will be analysed again, including the ones already done. Use this after changing a job's criteria. Continue?"/>
+                                    <button name="action_refresh" type="object" class="btn btn-light"
+                                            icon="fa-repeat" string="Refresh"/>
+                                </div>
+                            </div>
+
+                            <!-- Upload by hand -->
+                            <div class="o_hrai_card">
+                                <div class="o_hrai_card_title">
+                                    <i class="fa fa-cloud-upload" role="img" aria-label="Upload"/>
+                                    <span>Upload CVs by hand</span>
+                                </div>
+                                <p class="o_hrai_hint">Choose the job, add one or many files (PDF, DOCX, TXT). Each file becomes an applicant; the AI fills in the name and contacts from the CV.</p>
+                                <group>
+                                    <field name="job_id" options="{'no_create': True}" placeholder="Spontaneous application"/>
+                                </group>
+                                <field name="attachment_ids" widget="many2many_binary" nolabel="1"/>
+                                <div class="o_hrai_actions mt-3">
+                                    <button name="action_upload" type="object" class="btn btn-primary"
+                                            icon="fa-cloud-upload" string="Upload and analyse"/>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Shortcuts -->
+                        <div class="o_hrai_card">
+                            <div class="o_hrai_card_title">
+                                <i class="fa fa-folder-open-o" role="img" aria-label="Lists"/>
+                                <span>Open the lists</span>
+                            </div>
+                            <div class="o_hrai_actions">
+                                <button name="action_open_matches" type="object" class="btn btn-light"
+                                        icon="fa-check-circle" string="Matches"/>
+                                <button name="action_open_analysed" type="object" class="btn btn-light"
+                                        icon="fa-list" string="All analysed"/>
+                                <button name="action_open_queue" type="object" class="btn btn-light"
+                                        icon="fa-hourglass-half" string="In the queue"/>
+                                <button name="action_open_failed" type="object" class="btn btn-light"
+                                        icon="fa-exclamation-triangle" string="Failed"/>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Latest results -->
+                    <field name="recent_html" nolabel="1" readonly="1" class="o_hrai_report_field"/>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="hr_recruitment_ai_center_action" model="ir.actions.act_window">
+        <field name="name">AI CV analysis</field>
+        <field name="res_model">hr.recruitment.ai.center</field>
+        <field name="view_mode">form</field>
+        <field name="target">main</field>
+    </record>
+
+    <menuitem id="menu_hr_recruitment_ai_center"
+              name="AI analysis"
+              parent="hr_recruitment.menu_hr_recruitment_root"
+              action="hr_recruitment_ai_center_action"
+              groups="hr_recruitment.group_hr_recruitment_user"
+              sequence="3"/>
+</odoo>
