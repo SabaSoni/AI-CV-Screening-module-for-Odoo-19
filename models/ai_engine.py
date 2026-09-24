@@ -79,10 +79,16 @@ class HrRecruitmentAiEngine(models.AbstractModel):
     # ------------------------------------------------------------------ #
     @api.model
     def _settings(self):
-        ICP = self.env["ir.config_parameter"].sudo()
+        # Read straight from the table, not through the ORM's per-process cache: the
+        # background worker runs for minutes outside any request, and a setting changed
+        # meanwhile (from the UI, another worker process or a script) must apply to the
+        # next CV. It is a dozen rows once per analysis.
+        self.env.cr.execute(
+            "SELECT key, value FROM ir_config_parameter WHERE key LIKE %s", (PARAM_PREFIX + "%",))
+        stored = {key[len(PARAM_PREFIX):]: value for key, value in self.env.cr.fetchall()}
         out = {}
         for key, default in DEFAULTS.items():
-            raw = ICP.get_param(PARAM_PREFIX + key)
+            raw = stored.get(key)
             if raw in (None, False, ""):
                 out[key] = default
                 continue

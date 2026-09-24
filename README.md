@@ -12,6 +12,9 @@ no CV ever leaves your server. Fully translated into Georgian.
 | ![Job positions](docs/screenshots/job_positions.png) | ![Job criteria](docs/screenshots/job_criteria.png) |
 | Job positions dashboard | A job's criteria: skills with keywords, weights and must-haves |
 
+The interface and the AI's own texts are also fully Georgian:
+[the same report in Georgian](docs/screenshots/applicant_report_ka.png).
+
 **Documents:** [INSTALL.md](INSTALL.md) (installing on a real Odoo 19 or another
 computer) · [HOW_IT_WORKS.md](HOW_IT_WORKS.md) (the whole pipeline, top to bottom).
 
